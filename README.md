@@ -24,15 +24,15 @@ Starting with the player with the priority token, players will choose a vertical
 ### Actions
 When performing an action a unit may do one of the following:
 
-#### Attack
+1. **Attack**<br/>
 An Attack is performed by picking an opposing unit between "min-range" and "max-range" and within line of sight of the attacker. When attacking, the attacker will look at their "attack" stat for their "strength" and "skill" ratings. The attacker will then modify those ratings by the modifiers found in their range table for the appropriate range the attack is occuring at. The attacker will then roll a d20 for each "strength" they have. On each roll, the number on that d20 will be increased by the defending players "armor" rating. If the ending number is below the attackers "skill" rating the attack will be considered successful and an "on target attack" will be accessed. After all "on target attacks" are acessed, the total is then decreased by the defenders "dodge" rating and the total will be assigned as "hits" to the defender. The defender will then gain distress equal to the number of hits. If the defenders "destress" rating exeeds their health the defender is considered defeated, their miniature is removed from the board and their card is flipped over and "exhausted".
 
-#### Move
-A move is performed by taking a unit and moving their base up to the amount of their move. A single move can be split up but each split must consist of the character moving in a measureable straight line. A character's first move of a turn the can move up to the amount of their "sprint" rating while each subsequent movement can move up to an amount of their stamina rating.
-  #### Moving Vertically
-  When a unit moves vertically more than it 1 movement in distance, it must first reach the base of the vertical objects and then move up it. If a handhold or a ladder is not present, each one move the unit takes vertically will cost two movement points. If the unit is unable to reach a location that allows it's base to stand flat the unit will fall, exhausting the unit and ending it's turn.
+2. **Move**<br/>
+A move is performed by taking a unit and moving their base up to the amount of their move. A single move can be split up but each split must consist of the character moving in a measureable straight line. A character's first move of a turn the can move up to the amount of their "sprint" rating while each subsequent movement can move up to an amount of their stamina rating.<br/>
+**Moving Vertically** <br/>
+When a unit moves vertically more than it 1 movement in distance, it must first reach the base of the vertical objects and then move up it. If a handhold or a ladder is not present, each one move the unit takes vertically will cost two movement points. If the unit is unable to reach a location that allows it's base to stand flat the unit will fall, exhausting the unit and ending it's turn.
 
-#### Use an Ability
+3. **Use an Ability** <br/>
 A unit may also use an ability when applicable. These abilities will explain what they do and how they work and can change the gameplay rules.
 
 ### End of Round
