@@ -61,7 +61,8 @@ Identity: {
 
 ### Units combat stats will be contained under the units "combat"
 
-``` Combat: {
+``` 
+Combat: {
   Attack: (Strength-Skill) The number of d20 dice you get to roll when attacking (strength) and the number you have to roll below for a successfull attack (skill).
   Defense: (Armor-Dodge) The amount you can increase each d20 dice on an attack and the number of dice you can nullify completely.
   Range: (min-range-[strength modifier/skill modifier]-range[strength modifier/skill modifier]-max-range) The Range this unit can attack at and the change in their strength/skill at each range
