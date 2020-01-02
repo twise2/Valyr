@@ -9,13 +9,17 @@ To play Valyr you will need a ruler or tape measure a standard dice set. Some un
 
 # How to Play
 
+## Start of game
+At the begining of the game each player will create or come with an "army" consisting of units totalling to an agreed upon appraisal value.
+
+The player with the lowest appraisal value will start the game with the priority token.
+
 ## Rounds
 
-###Start of Round
-Players each turn all of their character cards vertical, and then pass the priority token right. Players will then take turns.
+A game consists of a session of rounds. At the beginning of each round, Players each turn all of their unit cards vertical and  then take turns starting with the player with the priority token.
 
 ### Turns
-Starting with the player with the priority token, each player will choose a vertical unit card and take a number of actions equal to the "energy" of that card. After performing each action the unit will become "exhausted" (denoted by turning the card horizontal) and cannot be used for the rest of the round. Then the player to the left will take a turn
+Starting with the player with the priority token, players will choose a vertical unit card and take a number of actions equal to the "energy" of that card. After performing these actions the unit will become "exhausted" (denoted by turning the card horizontal) and cannot be used for the rest of the round. Then the player to the left will take a turn.
 
 ### Actions
 When performing an action a unit may do one of the following:
@@ -31,16 +35,11 @@ A move is performed by taking a unit and moving their base up to the amount of t
 #### Use an Ability
 A unit may also use an ability when applicable. These abilities will explain what they do and how they work and can change the gameplay rules.
 
-
 ### End of Round
-After a turn, if all units are exhausted, the round ends and a new one begins.
+After a turn, if all units are exhausted, the round ends the player with the priority token passes it to the right and a new round begins.
 
-## End of Game
-If at any time all players except one have been defeated of concede, the game ends.
-
-
-
-
+### End of Game
+If at any time all players except one have been defeated or concede, the game ends and the last player standing wins.
 
 
 ### Unit Basics
