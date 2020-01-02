@@ -30,7 +30,7 @@ An Attack is performed by picking an opposing unit between "min-range" and "max-
 #### Move
 A move is performed by taking a unit and moving their base up to the amount of their move. A single move can be split up but each split must consist of the character moving in a measureable straight line. A character's first move of a turn the can move up to the amount of their "sprint" rating while each subsequent movement can move up to an amount of their stamina rating.
   #### Moving Vertically
-    When a unit moves vertically more than it 1 movement in distance, it must first reach the base of the vertical objects and then move up it. If a handhold or a ladder is not present, each one move the unit takes vertically will cost two movement points. If the unit is unable to reach a location that allows it's base to stand flat the unit will fall, exhausting the unit and ending it's turn.
+  When a unit moves vertically more than it 1 movement in distance, it must first reach the base of the vertical objects and then move up it. If a handhold or a ladder is not present, each one move the unit takes vertically will cost two movement points. If the unit is unable to reach a location that allows it's base to stand flat the unit will fall, exhausting the unit and ending it's turn.
 
 #### Use an Ability
 A unit may also use an ability when applicable. These abilities will explain what they do and how they work and can change the gameplay rules.
