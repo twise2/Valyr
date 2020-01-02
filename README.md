@@ -8,18 +8,18 @@ Valyr is a 2-∞ Player Game revolving around taking Heroes and having them batt
 To play Valyr you will need a ruler or tape measure a standard dice set. Some units may also consist of more components.
 
 ## Sample Game
-At the begining of the game each player will create or come with an "army" consisting of units totalling to an agreed upon appraisal value.
+At the beginning of the game each player will create or come with an "army" consisting of units with a total appraisal value less than or equal to an agreed upon amount.
 
-The player with the lowest appraisal value will start the game with the priority token.
+The player with the lowest appraisal value will start the game with the priority token. In the event of a tie a coin flip will detemine the first player.
 
-## Rounds
+### Rounds
 
 A game consists of a session of rounds. At the beginning of each round, Players each turn all of their unit cards vertical and  then take turns starting with the player with the priority token.
 
-## Turns
+### Turns
 Starting with the player with the priority token, players will choose a vertical unit card and take a number of actions equal to the "energy" of that card. After performing these actions the unit will become "exhausted" (denoted by turning the card horizontal) and cannot be used for the rest of the round. Then the player to the left will take a turn.
 
-### Actions
+#### Actions
 When performing an action a unit may do one of the following:
 
 1. **Attack**<br/>
@@ -33,10 +33,10 @@ When a unit moves vertically more than it 1 movement in distance, it must first 
 3. **Use an Ability** <br/>
 A unit may also use an ability when applicable. These abilities will explain what they do and how they work and can change the gameplay rules.
 
-## End of Round
+### End of Round
 After a turn, if all units are exhausted, the round ends the player with the priority token passes it to the right and a new round begins.
 
-## End of Game
+### End of Game
 If at any time all players except one have been defeated or concede, the game ends and the last player standing wins.
 
 
