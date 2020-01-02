@@ -43,11 +43,9 @@ If at any time all players except one have been defeated or concede, the game en
 
 
 # Unit Basics
-In this game you will construct armies consisting of Units.
+In this game you will construct armies consisting of Units. Units will consists of stats which are contained in the Unit folder:
 
-Units will consists of stats which are contained in the Unit folder:
-
-Units predominant types and information will be contained under the units "Identity" explained below.
+### Units predominant types and information will be contained under the units "Identity" explained below.
 
 ```
 Identity: {
@@ -61,7 +59,7 @@ Identity: {
 }
 ```
 
-Units combat stats will be contained under the units "combat"
+### Units combat stats will be contained under the units "combat"
 
 ``` Combat: {
   Attack: (Strength-Skill) The number of d20 dice you get to roll when attacking (strength) and the number you have to roll below for a successfull attack (skill).
@@ -74,7 +72,7 @@ Units combat stats will be contained under the units "combat"
 }
 ```
 
-Units also contain "Abilites" which consist of special actions and passives the unit has.
+### Units also contain "Abilites" which consist of special actions and passives the unit has.
 
 ```
 Abilites: {
@@ -86,10 +84,10 @@ Abilites: {
 }
 ```
 
-Some Units also need extra components listed under components
+### Some Units also need extra components listed under components
 
 ```
-Components: Extra of components needed for this character
+Components: Extra components needed for this character
 ```
 
 
