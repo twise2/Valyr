@@ -7,9 +7,7 @@ Valyr is a 2-∞ Player Game revolving around taking Heroes and having them batt
 
 To play Valyr you will need a ruler or tape measure a standard dice set. Some units may also consist of more components.
 
-# How to Play
-
-## Start of game
+## Sample Game
 At the begining of the game each player will create or come with an "army" consisting of units totalling to an agreed upon appraisal value.
 
 The player with the lowest appraisal value will start the game with the priority token.
