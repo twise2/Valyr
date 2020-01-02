@@ -1,17 +1,52 @@
 # Valyr
-An Open Source War Game.
+Valyr is a 2-∞ Player Game revolving around taking Heroes and having them battle it out anywhere (on your tabletop). The game revolves around a “True Movement” system that uses actual distance measuring to move characters in your game to defend yourself. Teams are built to a point standard and games consist of positioning to attack your opponents to win the battle.
 
-## Getting Started
+# Getting Started
 
-### What you will need
+## What you will need
 
-To play Valyr you will need a ruler or tape measure and a standard dice set.
+To play Valyr you will need a ruler or tape measure a standard dice set. Some units may also consist of more components.
+
+# How to Play
+
+## Rounds
+
+###Start of Round
+Players each turn all of their character cards vertical, and then pass the priority token right. Players will then take turns.
+
+### Turns
+Starting with the player with the priority token, each player will choose a vertical unit card and take a number of actions equal to the "energy" of that card. After performing each action the unit will become "exhausted" (denoted by turning the card horizontal) and cannot be used for the rest of the round. Then the player to the left will take a turn
+
+### Actions
+When performing an action a unit may do one of the following:
+
+#### Attack
+An Attack is performed by picking an opposing unit between "min-range" and "max-range" and within line of sight of the attacker. When attacking, the attacker will look at their "attack" stat for their "strength" and "skill" ratings. The attacker will then modify those ratings by the modifiers found in their range table for the appropriate range the attack is occuring at. The attacker will then roll a d20 for each "strength" they have. On each roll, the number on that d20 will be increased by the defending players "armor" rating. If the ending number is below the attackers "skill" rating the attack will be considered successful and an "on target attack" will be accessed. After all "on target attacks" are acessed, the total is then decreased by the defenders "dodge" rating and the total will be assigned as "hits" to the defender. The defender will then gain distress equal to the number of hits. If the defenders "destress" rating exeeds their health the defender is considered defeated, their miniature is removed from the board and their card is flipped over and "exhausted".
+
+#### Move
+A move is performed by taking a unit and moving their base up to the amount of their move. A single move can be split up but each split must consist of the character moving in a measureable straight line. A character's first move of a turn the can move up to the amount of their "sprint" rating while each subsequent movement can move up to an amount of their stamina rating.
+  #### Moving Vertically
+    When a unit moves vertically more than it 1 movement in distance, it must first reach the base of the vertical objects and then move up it. If a handhold or a ladder is not present, each one move the unit takes vertically will cost two movement points. If the unit is unable to reach a location that allows it's base to stand flat the unit will fall, exhausting the unit and ending it's turn.
+
+#### Use an Ability
+A unit may also use an ability when applicable. These abilities will explain what they do and how they work and can change the gameplay rules.
 
 
-### Units 
-In this game you will construct armies consisting of Units. 
+### End of Round
+After a turn, if all units are exhausted, the round ends and a new one begins.
 
-Units will consists of stats which are contained in the Unit folder: 
+## End of Game
+If at any time all players except one have been defeated of concede, the game ends.
+
+
+
+
+
+
+### Unit Basics
+In this game you will construct armies consisting of Units.
+
+Units will consists of stats which are contained in the Unit folder:
 
 Units predominant types and information will be contained under the units "Identity" explained below.
 
@@ -29,13 +64,13 @@ Identity: {
 
 Units combat stats will be contained under the units "combat"
 
-```
-Combat: {
-  Attack: The amount of attack modifier this unit gets.
-  Defense: The defense modifier this unit gets.
-  Range: The Range this unit can attack at.
-  Movement: How far this unit can move.
-  Health: How strong a unit is.
+``` Combat: {
+  Attack: (Strength-Skill) The number of d20 dice you get to roll when attacking (strength) and the number you have to roll below for a successfull attack (skill).
+  Defense: (Armor-Dodge) The amount you can increase each d20 dice on an attack and the number of dice you can nullify completely.
+  Range: (min-range-[strength modifier/skill modifier]-range[strength modifier/skill modifier]-max-range) The Range this unit can attack at and the change in their strength/skill at each range
+  Energy: The amount of actions this unit can take on a turn.
+  Movement: (Sprint-Stamina) How far this unit can move on it's first move of the turn (Sprint) and each subsequent move in the same turn (Stamina)
+  Health: How much "distress" a unit can take before being defeated.
   Appraisal: How expensive this unit is to add to your army.
 }
 ```
@@ -50,6 +85,12 @@ Abilites: {
     Template: A link to the template the ability uses (if needed)
   }
 }
+```
+
+Some Units also need extra components listed under components
+
+```
+Components: Extra of components needed for this character
 ```
 
 
