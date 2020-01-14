@@ -18,23 +18,27 @@
     "Health": "2",
     "Appraisal": "250"
   },
-  "Abilites": [
-    "Ritual Items": {
+  "Abilities": [
+    {
+      "Name": "Ritual Items",
       "Type": "Passive",
-      "Ability": "Olantian Councillor starts the game with 2 ritual items on their character. These can be used for other abilities.",
+      "Ability": "Olantian Councillor starts the game with 2 ritual items on their character. These can be used for other Abilities.",
       "Template": "Vial Token"
     },
-    "Poison Dagger": {
+    {
+      "Name": "Poison Dagger",
       "Type": "Active",
       "Ability": "As an action, choose an adjacent character and roll a d20. On a roll higher than 10, put a poison counter on that character. At the end of each round that character rolls a d20. On a roll higher than 10 that character gains one distress. On a roll of 1 that character removes their poison counter.",
       "Template": "Poison Token"
     },
-    "Sacrifice Of Fortune": {
+    {
+      "Name": "Fortunate Sacrifice",
       "Type": "Active",
       "Ability": "As an action, Choose an allied character and put a Fortune token on them. That character may remove this token at any time in order to reroll any one die roll",
       "Template": "Fortune Token"
     },
-    "Sacrifice Of Life": {
+    {
+      "Name": "Sacrifice of Life",
       "Type": "Active",
       "Ability": "As an action, Choose an allied character in line of site within 5 range and remove one distress token from them."
     }

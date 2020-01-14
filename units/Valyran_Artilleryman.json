@@ -2,7 +2,7 @@
   "Identity": {
     "Name": "Valyr Artilleryman",
     "Basic_Description": "Silver clad knights with large cannon style guns and Red Plumes",
-    "Description": "".
+    "Description": "",
     "Dynasty": "Valyr",
     "Type": "Conscript",
     "Class": "Bombadier",
@@ -18,13 +18,16 @@
     "Health": "3",
     "Appraisal": "100"
   },
-  "Abilites": [
-    "Bombard": {
+  "Abilities": [
+    {
+      "Name": "Bombard",
       "Type": "Passive",
       "Ability": "Attacks from this unit hit all units within 1 range of the target."
     },
-    "Explode": {
+    {
+      "Name": "Shrapnel",
       "Type": "Passive",
       "Ability": "Attacks from this unit can not be dodged."
     }
+  ]
 }

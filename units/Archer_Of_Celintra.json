@@ -2,7 +2,7 @@
   "Identity": {
     "Name": "Archer Of Celintra",
     "Basic_Description": "Unarmored Archer clad in blue with golden ethereal bows",
-    "Description": "".
+    "Description": "",
     "Dynasty": "Celintra",
     "Type": "Conscript",
     "Class": "Archer",
@@ -18,16 +18,19 @@
     "Health": "2",
     "Appraisal": "75"
   },
-  "Abilites": [
-    "Lob": {
+  "Abilities": [
+    {
+      "Name" : "Lob",
       "Type": "Passive",
       "Ability": "This unit can extend line of site vertically for the purposes of attacking."
     },
-    "Volley": {
+    {
+      "Name": "Volley",
       "Type": "Passive",
       "Ability": "This unit gains +2 skill for each other Archerss Of Celintra within 1 range."
     },
-    "Phase": {
+    {
+      "Name" : "Phase",
       "Type": "Passive",
       "Ability": "When using 'Sprint', Archers of Celintra can move through objects as long as they end their movement in a valid location."
     }

@@ -18,27 +18,32 @@
     "Health": "3",
     "Appraisal": "350"
   },
-  "Abilites": [
-    "Ammunition": {
+  "Abilities": [
+     {
+      "Name": "Ammunition",
       "Type": "Passive",
-      "Ability": "Uzrill starts the game with 3 vial tokens on his character. These can be used for other abilities.",
+      "Ability": "Uzrill starts the game with 3 vial tokens on his character. These can be used for other Abilities.",
       "Template": "Vial Token"
     },
-    "Vial of Borax": {
+    {
+      "Name": "Vial of Borax",
       "Type": "Active",
       "Ability": "Cost 1 Vial Token: Once per turn as an action, choose a character withing 10 range. Roll a d20. On a roll higher than 10, that character takes 1 distress. Then keep repeating this ability for the cloest character within 3 range of the last hit character if that has not been targeted yet this turn."
     },
-    "Vial of Smoke": {
+    {
+      "Name": "Vial of Smoke",
       "Type": "Active",
-      "Ability": "Cost 1 Vial Token: Once per turn as an action, Choose a location within 7 range of Uzrill and put a Smoke Bomb template on it. All line of site and movement abilities within within 5 range of of that template are blocked. Remove this bomb at the start of Uzrills next turn.",
+      "Ability": "Cost 1 Vial Token: Once per turn as an action, Choose a location within 7 range of Uzrill and put a Smoke Bomb template on it. All line of site and movement Abilities within within 5 range of of that template are blocked. Remove this bomb at the start of Uzrills next turn.",
       "Template": "Smoke Bomb"
     },
-    "Vial of Incense": {
+    {
+      "Name": "Vial of Incense",
       "Type": "Active",
       "Ability": "Cost 1 Vial Token: Once per turn as an action, Choose a location  within 7 range of Uzrill and put an Incense Template on it. Any unit starting its turn or that moves within 3 range of the token loses 1 energy that turn. (This ability cannot reduce a units energy below 1)",
       "Template": "Incense"
     },
-    "Concoct": {
+    {
+      "Name": "Concoct",
       "Type": "Active",
       "Ability": "Cost 4 energy: Add one vial token to Uzrill's character. You cannot have more than 3 vial tokens at one time."
     }

@@ -18,16 +18,19 @@
     "Health": "4",
     "Appraisal": "300"
   },
-  "Abilites": [
-    "Big Game Hunter": {
+  "Abilities": [
+    {
+      "Name" : "Big Game Hunter",
       "Type": "Passive",
       "Ability": "When attacking an enemy of size greater than medium, Zureil adds 5 to their skill rating."
     },
-    "Grappling Hook": {
+    {
+      "Name" : "Grappling Hook",
       "Type": "Active",
       "Ability": "Once per turn as an action; Choose a location in line of site of Zuriel within 10 range and atleast 3 range above or below Zuriel. Zuriel moves to that location."
     },
-    "Crushing Grip": {
+    {
+      "Name" : "Crushing Grip",
       "Type": "Active",
       "Ability": "Once per turn as an action; if you haven't used an active ability this turn, choose a character smaller than medium within 1 of Zuriel. This character takes 2 distress and cannot disengage."
     }

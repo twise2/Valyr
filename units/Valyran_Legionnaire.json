@@ -18,8 +18,9 @@
     "Health": "4",
     "Appraisal": "75"
   },
-  "Abilites": [
-    "Legion Wall": {
+  "Abilities": [
+    {
+      "Name" : "Legion Wall",
       "Type": "Passive",
       "Ability": "Each unit within 1 range of Valyr Legionnaire Gain +1 Block."
     }

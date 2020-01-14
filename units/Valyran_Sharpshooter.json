@@ -2,7 +2,7 @@
   "Identity": {
     "Name": "Valyr Sharpshooter",
     "Basic_Description": "Silver clad knights with large barreled guns and blue highlights",
-    "Description": "".
+    "Description": "",
     "Dynasty": "Valyr",
     "Type": "Conscript",
     "Class": "Marksman",
@@ -18,13 +18,16 @@
     "Health": "3",
     "Appraisal": "100"
   },
-  "Abilites": [
-    "Crackshot": {
+  "Abilities": [
+    {
+      "Name": "Crackshot",
       "Type": "Passive",
       "Ability": "Any successful attack from over 10 range applies three distress."
     },
-    "Sniper": {
+    {
+      "Name": "Sniper",
       "Type": "Passive",
       "Ability": "Any successful attack from over 10 range cannot be dodged."
     }
+  ]
 }

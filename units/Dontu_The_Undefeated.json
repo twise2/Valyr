@@ -18,12 +18,14 @@
     "Health": "5",
     "Appraisal": "450"
   },
-  "Abilites": [
-    "Strategic Commander": {
+  "Abilities": [
+    {
+      "Name": "Strategic Commander",
       "Type": "Active",
       "Ability": "Dontu can spend one energy to reroll up to 2 attack die."
     },
-    "Frontline Commander": {
+    {
+      "Name": "Frontline Commander",
       "Type": "Passive",
       "Ability": "Any unit attacking a unit adjacent to Dontu may reroll up to 1 attack die during combat."
     }

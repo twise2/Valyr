@@ -2,7 +2,7 @@
   "Identity": {
     "Name": "Alaestoes_The_Celintran_Bow",
     "Basic_Description": "Heavily Clad archer with a hood in robes with aura bow",
-    "Description": "".
+    "Description": "",
     "Dynasty": "Celintra",
     "Type": "Champion",
     "Class": "Archer",
@@ -18,12 +18,14 @@
     "Health": "6",
     "Appraisal": "350"
   },
-  "Abilites": [
-    "Phased-Arrow": {
+  "Abilities": [
+    {
+      "Name" : "Phased-Arrow",
       "Type": "Active",
       "Ability": "Cost 1 energy: This units next attack does not need line of site. This ability can only be used once per turn."
     },
-    "Phase": {
+    {
+      "Name" : "Phase",
       "Type": "Passive",
       "Ability": "When using 'Sprint', Archers of Celintra can move through objects as long as they end their movement in a valid location."
     }

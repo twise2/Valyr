@@ -18,12 +18,14 @@
     "Health": "9",
     "Appraisal": "400"
   },
-  "Abilites": [
-    "Unrelenting": {
+  "Abilities": [
+    {
+      "Name": "Unrelenting",
       "Type": "Passive",
       "Ability": "If this unit has more distress than health, it does not die until the end of the round."
     },
-    "Berserk": {
+    {
+      "Name": "Berserk",
       "Type": "Passive",
       "Ability": "If this unit is adjacent to an opponents unit, it must attack that unit."
     }

@@ -2,7 +2,7 @@
   "Identity": {
     "Name": "Herald Of Celintra",
     "Basic_Description": "a mage in golden robes with large blue aura wings, holding a two large ornate wands with a crown of energy",
-    "Description": "".
+    "Description": "",
     "Dynasty": "Celintra",
     "Type": "Champion",
     "Class": "Mage",
@@ -18,21 +18,26 @@
     "Health": "3",
     "Appraisal": "450"
   },
-  "": [
-    "Flying": {
+  "Abilities": [
+    {
+      "Name": "Flying",
       "Type": "Passive",
       "Ability": "This unit can move vertically without spending movement."
     },
-    "Inspire": {
+    {
+      "Name": "Inspire",
       "Type": "Passive",
       "Ability": "All units within 3 range of Celintran Battle Seraph gain 1 speed and 1 stamina."
     },
-    "Conductive Bolt": {
+    {
+      "Name": "Conductive Bolt",
       "Type": "Active",
       "Ability": "Cost 2 energy: Roll a d20 on a result greater than 15, Choose an unit anywhere on the map. That unit gains 1 distress."
     },
-    "Summon": {
+    {
+      "Name": "Summon",
       "Type": "Active",
       "Ability": "Cost 3 energy, choose an allied unit. Move that unit to any location adjacent to Herald of Celintra."
     }
+  ]
 }

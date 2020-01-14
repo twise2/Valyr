@@ -2,7 +2,7 @@
   "Identity": {
     "Name": "Valyran Mage",
     "Basic_Description": "Hooded Mage in Red",
-    "Description": "".
+    "Description": "",
     "Dynasty": "Valyr",
     "Type": "Conscript",
     "Class": "Mage",
@@ -18,14 +18,17 @@
     "Health": "1",
     "Appraisal": "150"
   },
-  "": [
-    "Fireball": {
+  "Abilities": [
+    {
+      "Name": "Fireball",
       "Type": "Active",
       "Ability": "Cost 2 Energy: Choose an enemy unit within 7 range of Valyran Mage. Roll a d20. On a roll above 10, assign 1 distress to that unit."
     },
-    "Meteor": {
+    {
+      "Name": "Meteor",
       "Type": "Active",
       "Ability": "Cost 3 Energy: Sacrifice Ethereal Mage or An Allied Unit adjacent to them: Choose any location within 30 range. Put down the metor template and roll a d6. On a 2-6, roll the d6 again and move the template from it's center in the direction of the first d6 as marked on the template a range equal to the second d6 rolled. All units within the template take 5 distress.",
       "Template": "Meteor (Circle with 1-6 equidistant around the outside and radius of 3 range)"
     }
+  ]
 }
