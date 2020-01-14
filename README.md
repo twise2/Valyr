@@ -43,6 +43,9 @@ If at any time all players except one have been defeated or concede, the game en
 # Unit Basics
 In this game you will construct armies consisting of Units. Units will consists of stats which are contained in the Unit folder:
 
+
+![alt text](https://github.com/twise2/Valyr/tree/master/Images/unit_card.png)
+
 ### Units predominant types and information will be contained under the units "Identity" explained below.
 
 ```
