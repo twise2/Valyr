@@ -1,0 +1,26 @@
+{
+  "Identity": {
+    "Name": "Berserking Grunts",
+    "Basic_Description": "Shirtless unit wielding handmade weapons with tribal tatoos.",
+    "Description": "".
+    "Dynasty": "Olanti",
+    "Type": "Conscript",
+    "Class": "Berserker",
+    "Species": "Human",
+    "Size": "Medium"
+  },
+  "Combat": {
+    "Attack": "3-10",
+    "Defense": "0-0",
+    "Range": "0(0/0)1",
+    "Energy": "2",
+    "Movement": "7-3",
+    "Health": "1",
+    "Appraisal": "50"
+  },
+  "": [
+    "Fodder": {
+      "Type": "Passive",
+      "Ability": "If this unit is adjacent to an opponents unit, the opposing unit loses 1 strength when attacking any non-adjacent target."
+    }
+}

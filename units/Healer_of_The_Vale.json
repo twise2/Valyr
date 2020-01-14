@@ -1,0 +1,30 @@
+{
+  "Identity": {
+    "Name": "Healer of the Vale",
+    "Basic_Description": "Elvish Healers",
+    "Description": "".
+    "Dynasty": "Neutral",
+    "Type": "Champion",
+    "Class": "Mage",
+    "Species": "Human",
+    "Size": "Medium"
+  },
+  "Combat": {
+    "Attack": "1-5",
+    "Defense": "0-0",
+    "Range": "0(0/0)1",
+    "Energy": "2",
+    "Movement": "5-5",
+    "Health": "1",
+    "Appraisal": "100"
+  },
+  "": [
+    "Dispell": {
+      "Type": "Active",
+      "Ability": "Remove one of any token or template from an adjacent allied unit."
+    },
+    "Heal": {
+      "Type": "Active",
+      "Ability": "Remove one distress token from any adjactent unit."
+    }
+}

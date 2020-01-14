@@ -1,5 +1,5 @@
 # Valyr
-Valyr is a 2-∞ Player Game revolving around taking Heroes and having them battle it out anywhere (on your tabletop). The game revolves around a “True Movement” system that uses actual distance measuring to move characters in your game to defend yourself. Teams are built to a point standard and games consist of positioning to attack your opponents to win the battle.
+Valyr is a 2-∞ Player Game revolving around making an army of units and having them battle it out anywhere (on your tabletop). The game revolves around a “True Movement” system that uses actual distance measuring to move characters in your game to defend yourself. Teams are built to a point standard and games consist of positioning to attack your opponents to win the battle.
 
 # Getting Started
 
@@ -50,8 +50,10 @@ In this game you will construct armies consisting of Units. Units will consists 
 ```
 Identity: {
   Name: The units name.
+  Basic_Description: Basic Description of what the unit looks like.
+  Description: Full description of what the unit is in lore.
   Dynasty: The faction the unit belongs to.
-  Type: The character type of the unit. (Hero or Conscript)
+  Type: The character type of the unit. (Champion or Conscript) Champions can only be one ofs in an army, conscripts can be as many as you want.
   Class: The class of character type
   Species: The units species.
   Distinctions: Distinct Traits the unit has.
@@ -61,7 +63,7 @@ Identity: {
 
 ### Units combat stats will be contained under the units "combat"
 
-``` 
+```
 Combat: {
   Attack: (Strength-Skill) The number of d20 dice you get to roll when attacking (strength) and the number you have to roll below for a successfull attack (skill).
   Defense: (Armor-Dodge) The amount you can increase each d20 dice on an attack and the number of dice you can nullify completely.
@@ -91,10 +93,11 @@ Abilites: {
 Components: Extra components needed for this character
 ```
 
-
-
-
-
-
+# Game Play Tenants
+The core of this game is to allow creative flexibility and allow for quick wargame elements in any location. Much like collectible card games, design decisions should revolve around:
+  1. Creativity. Restrictions breed creativity, but the meta should not revolve around specific elements. Location changes should make most character playable situationally.
+  2. Game Speed. Gameplay should not be overly restricted or drag on. Scenarios should encourage quicker gameplay that does not drag out, especially in multiplayer scenarios.
+  3. Tension Points. The game should lead to points where a good maneuver or role can swing the tide of the game. Clever Play - Luring opponents into a trap or executing a plan should be rewarded.
+  4. Reward Flashy Plays. The game should encourage people to take actions, whatever they may be. Passive or auto play units and teams should be discouraged. General flexible plans should be neccessary.
 
 

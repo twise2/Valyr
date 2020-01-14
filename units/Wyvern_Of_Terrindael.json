@@ -1,0 +1,42 @@
+{
+  "Identity": {
+    "Name": "Wyvern Of Terrindael",
+    "Basic_Description": "A orange Wyvern with a curled up tail",
+    "Description": "",
+    "Dynasty": "Neutral",
+    "Type": "Champion",
+    "Class": "Dragon",
+    "Species": "Dragon",
+    "Size": "Massive"
+  },
+  "Combat": {
+    "Attack": "7-15",
+    "Defense": "5-2",
+    "Range": "0(0-0)2",
+    "Energy": "3",
+    "Movement": "9-9",
+    "Health": "8",
+    "Appraisal": "850"
+  },
+  "Abilites": [
+    "Flying": {
+      "Type": "Passive",
+      "Ability": "This unit can move vertically without spending movement."
+    },
+    "Fire Breath": {
+      "Type": "Active",
+      "Ability": "Once per turn as an action, place the Fire Funnel template in front of Dragon of Terrindael. All units within the template take 2 distress.",
+      "Template": "Wyvern Funnel"
+    },
+    "Wing Flap": {
+      "Type": "Active",
+      "Ability": "Once per turn as an action, Place the funnel behind Dragon of Terrindael. For each unit in the funnel within a range of 2 move the defending unit to exactly 4 range away from Wyvern of Terrindael. This unit cannot move towards Wyvern Of Terrindael next turn.",
+      "Template": "Wyvern Funnel"
+    },
+    "Tail Whip": {
+      "Type": "Active",
+      "Ability": "Once per turn as an action, Place the funnel behind Dragon of Terrindael. For each unit in the funnel within a range of 2 perform a free attack action. On a successful hit, move the defending unit 2 range directly further away from Wyvern of Terrindael",
+      "Template": "Wyvern Funnel"
+    }
+  ]
+}

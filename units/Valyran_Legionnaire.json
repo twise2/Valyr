@@ -1,0 +1,27 @@
+{
+  "Identity": {
+    "Name": "Valyr Legionnaire",
+    "Basic_Description": "Silver clad knights with blue turtle shields and blue plumes equipped with long swords",
+    "Description": "",
+    "Dynasty": "Valyr",
+    "Type": "Conscript",
+    "Class": "Knight",
+    "Species": "Human",
+    "Size": "Medium"
+  },
+  "Combat": {
+    "Attack": "3-13",
+    "Defense": "3-2",
+    "Range": "0(0/0)1",
+    "Energy": "2",
+    "Movement": "5-5",
+    "Health": "4",
+    "Appraisal": "75"
+  },
+  "Abilites": [
+    "Legion Wall": {
+      "Type": "Passive",
+      "Ability": "Each unit within 1 range of Valyr Legionnaire Gain +1 Block."
+    }
+  ]
+}

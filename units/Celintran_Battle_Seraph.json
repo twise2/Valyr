@@ -1,0 +1,40 @@
+{
+  "Identity": {
+    "Name": "Celintran Battle Seraph",
+    "Basic_Description": "Unhooded gray robed mage with blue or gold aura wings with a battlestaph",
+    "Description": "".
+    "Dynasty": "Celintra",
+    "Type": "Conscript",
+    "Class": "Mage",
+    "Species": "Human",
+    "Size": "Medium"
+  },
+  "Combat": {
+    "Attack": "1-5",
+    "Defense": "0-2",
+    "Range": "0(0/0)1",
+    "Energy": "3",
+    "Movement": "6-6",
+    "Health": "1",
+    "Appraisal": "125"
+  },
+  "": [
+    "Flying": {
+      "Type": "Passive",
+      "Ability": "This unit can move vertically without spending movement."
+    },
+    "Inspire": {
+      "Type": "Passive",
+      "Ability": "All units within 3 range of Celintran Battle Seraph gain 1 speed and 1 stamina."
+    },
+    "Aura Shield": {
+      "Type": "Active",
+      "Ability": "Once per turn as an action, put a shield template around a unit. That unit gains +2 block the next time it is attacked. (This ability does not stack)",
+      "Template": "Shield (Blue Circle)"
+    },
+    "Bestow Aura": {
+      "Type": "Active",
+      "Ability": "Once per turn as an action, put an inspire template around a unit. That unit gains +2 skill the next time it attacks. (This ability does not stack)",
+      "Template": "Instill (Red Circle)"
+    }
+}

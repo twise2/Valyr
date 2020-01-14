@@ -1,0 +1,40 @@
+{
+  "Identity": {
+    "Name": "Celintran Lancer",
+    "Basic_Description": "Heavily armored knights on horseback with golden aura lances",
+    "Description": "".
+    "Dynasty": "Celintra",
+    "Type": "Conscript",
+    "Class": "Knight",
+    "Species": "Human",
+    "Size": "Medium",
+    "Mount_Size": "Large"
+  },
+  "Combat": {
+    "Attack": "3-10",
+    "Defense": "4-0",
+    "Mounted_Defense": "0-1",
+    "Range": "0(0/0)2",
+    "Energy": "2",
+    "Movement": "3-3",
+    "Mounted_Movement": "9-1",
+    "Health": "1",
+    "Appraisal": "75",
+    "Mounted_Health": "1"
+  },
+  "Abilites": [
+    "Mounted": {
+      "Type": "Passive",
+      "Ability": "This unit comes to the battlefiled mounted. Mounted units start with their mounted stats and upon losing all mount health move to their normal stats. This unit can dimount as an action at anytime, permanently losing it's mounted statistics and switching to it's normal statistics."
+    },
+    "Lancer": {
+      "Type": "Passive",
+      "Ability": "If this unit is mounted and moves more than 3 before attacking, it gains 2 strength."
+    },
+    "Draw Sword": {
+      "Type": "Active",
+      "Ability": "If this unit is dismounted and has not used 'draw sword' this game, as an action gain 5 skill for the rest of the game.",
+      "Template": "Sword Token (Put this on Celintran Lancer your card after activating the ability)"
+    }
+  ]
+}

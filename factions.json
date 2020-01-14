@@ -1,0 +1,26 @@
+{
+  "Valyr" : {
+    "Description" : "The ruling city of the continent. This faction's home base of Valyr is on the Eastern waters a sprawling capital built on top of the largest of the fonts of mana. It's people make their living off of trade with the unknown world. While the council is the absolute authority over the other ruling houses, the true power is in the hands of indivduals as you stray beyond the capital cities walls.",
+    "Colors": "Silver, Blue, Red, Black",
+    "Magic": "Silver, Fonts of Wealth, Fire",
+    "Furnishings": "Silver, Steel, Metal, Mass Production, Swords, Guns, Heavy Armor, Plumes",
+    "Naming_Conventions" : "https://www.fantasynamegenerators.com/angel_names.php Names for combat units, Standard names for characters",
+    "Character_Conventions" : "Strong expensive ranged Champions that work well on their own. Supported by cheap grouped conscripts that are typically slow and sturdy. Defined characters with specific roles"
+  },
+  "Celintra" : {
+    "Description" : "Far to the West on the other side of wastelands and forests another large conduit was found. With that power The kingdom of Celintra",
+    "Magic": "lightning, Auras, Fonts of Knowledge, Light",
+    "Furnishings": "Gold, Magic Items, Spears, Graecian Helmets, Bows, Mounts",
+    "Colors" : "Gold, Blue, White",
+    "Naming_Conventions" : "https://www.fantasynamegenerators.com/pegasus-names.php for combat units, Standard names for characters",
+    "Character_Conventions" : "Strong mobile expensive ranged Champions that work well on their own. Supported by cheap grouped conscripts that are typically slow and sturdy. Flexible characters with cantrips etc..."
+  },
+  "Olantian Kingdoms" : {
+    "Description": "Southern swamps as the other lands call them, however this small collection of autocratic fiefdoms have a power of their own. With it's many rulers and varied cultures rarely agreeing on anything. However a new ruler has recently emerged, uniting many of the factions and while also aggregating a large portion of the political power in Valyr.",
+    "Colors": "Crimson, Gray",
+    "Character_Conventions": "Little Magic is mostly ritualistic, little armor, rustic style and weapons. Cheap units, mostly melee. Super Heavy Champions with high HP. mostly named champions and not many conscripts",
+    "Naming_Conventions": "https://www.fantasynamegenerators.com/bounty-hunter-names.php for combat. Standard for characters",
+    "Furnishings" : "Apocolyptic Style Machinery, humans with machine stuck body parts",
+    "Magic": "Rituals, smoke, machinery, poison"
+  }
+}

@@ -1,0 +1,13 @@
+"Sizes": {
+  "Tiny": "~14mm",
+  "Small": "~21mm",
+  "Medium": "~28mm",
+  "Large": "~35mm",
+  "Giant": "~45mm",
+  "Massive": "~55mm",
+  "Colossal": "~>70mm",
+  "Immense": "large models on scale of moving fortresses"
+},
+"Notes": {
+  "Giant And Larger Units": "Giant and Larger Units Have a front and back. The front piece of the unit is where attacks come from unless otherwise denoted."
+}
