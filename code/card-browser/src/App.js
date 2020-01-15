@@ -7,6 +7,7 @@ import defense_icon from './icons/defense_icon.svg';
 import energy_icon from './icons/energy_icon.svg';
 import move_icon from './icons/move_icon.svg';
 import range_icon from './icons/range_icon.svg';
+import appraisal_icon from './icons/appraisal_icon.svg';
 import chevron_up from './icons/up-chevron.svg';
 
 class App extends Component {
@@ -18,7 +19,6 @@ class App extends Component {
       mouseMoving: true,
     };
   }
-
 
   componentWillMount() {
     fetch('/units')
@@ -43,7 +43,7 @@ class App extends Component {
   }
 
   RangeModifier(ranges) {
-    return ranges.map((range, index) => {
+    return ranges.reverse().map((range, index) => {
       //print the range modifier
       if (index % 2 !== 0) {
         return (
@@ -66,7 +66,7 @@ class App extends Component {
     return (
       <div
         className="Stat"
-        style={{height: '1this.state.currentIndexcurrentIndex%'}}>
+        style={{height: '1this.state.currentIndexcurrentIndex%', alignItems: 'flex-end'}}>
         <div className="RangeStats">{this.RangeModifier(ranges)}</div>
         <img src={range_icon} className="StatIcon" />
       </div>
@@ -148,6 +148,15 @@ class App extends Component {
                     {this.state.data[this.state.currentIndex].Combat.Movement}
                   </div>
                   <img src={move_icon} className="StatIcon" />
+                </div>
+                <div className="Stat">
+                  <div className="StatNumber">
+                    {this.state.data[this.state.currentIndex].Combat.Appraisal}
+                  </div>
+                  <img
+                    src={appraisal_icon}
+                    className="StatIcon"
+                  />
                 </div>
               </header>
             </header>

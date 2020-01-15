@@ -115,10 +115,11 @@
 }
 .Stat {
   display: flex;
+  padding: 2;
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 }
 .StatNumber {
   width: 0.45in;
@@ -132,8 +133,8 @@
   border: 1px solid black;
 }
 .StatIcon {
-  margin: 1px;
   flex: 1;
+  align-items: flex-end;
 }
 .RangeStats {
   height: 100%;

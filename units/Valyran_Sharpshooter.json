@@ -1,6 +1,6 @@
 {
   "Identity": {
-    "Name": "Valyr Sharpshooter",
+    "Name": "Valyran Sharpshooter",
     "Basic_Description": "Silver clad knights with large barreled guns and blue highlights",
     "Description": "",
     "Dynasty": "Valyr",
@@ -27,7 +27,7 @@
     {
       "Name": "Sniper",
       "Type": "Passive",
-      "Ability": "Any successful attack from over 10 range cannot be dodged."
+      "Ability": "Any attack from over 10 range cannot be dodged."
     }
   ]
 }
