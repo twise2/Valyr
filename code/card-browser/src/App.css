@@ -1,6 +1,6 @@
 .App {
   font-family: 'Herculanum';
-  background-color: gray;
+  background-color: LightGray;
   width: 8.5in;
   height: 11in;
   display: flex;
@@ -9,11 +9,18 @@
   justify-content: center;
   margin: auto;
 }
-
+.HorizontalFlex {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 .Card {
+  flex-shrink: 0;
   background-color: white;
-  max-height: 5.2in;
-  max-width: 3.9in;
+  max-height: 5.3in;
+  max-width: 4.0in;
   height: 100%;
   width: 100%;
   border-style: solid;
@@ -37,28 +44,26 @@
 }
 
 .CardName {
-  width: 75%;
-  margin-left: 2px;
+  width: 80%;
+  margin-left: 8px;
   align-items: center;
   background-color: rgb(47, 47, 47);
   color: white;
   text-align: center;
-  padding: 14px;
+  padding: 10px;
   margin-right: -20px;
   padding-right: 34px;
-  border: solid;
   font-weight: bold;
-  border-color: gray;
   border-width: 1px;
 }
 .HealthContainer {
-  width: 0.65in;
-  height: 0.5in;
+  width: 0.58in;
+  height: 0.45in;
   padding-top: 0.13in;
   text-align: center;
   background-color: rgb(126, 16, 16);
   color: white;
-  font-size: 34px;
+  font-size: 30px;
   border: solid;
   border-radius: 50%;
   border-color: gray;
@@ -79,16 +84,17 @@
 }
 .CharacterIdentity {
   white-space: pre;
-  margin: 2px;
-  margin-top: -11px;
-  background-color: rgb(127, 127, 127);
+  margin-left: 8px;
+  margin-top: -13px;
+  border: 1px solid LightGray;
   color: black;
   font-size: 14px;
 }
 .Abilities {
-  background-color: gray;
+  background-color: LightGray;
   border: 1px solid black;
   margin: 2px;
+  padding: 1px;
 }
 .AbilityHeader {
   color: white;
@@ -96,30 +102,30 @@
 }
 .AbilityText {
   color: black;
-  font-size: 12px;
+  font-size: 10px;
+  letter-spacing: 1px;
 }
 .Stats {
   width: 25%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: flex-end;
 }
 .Stat {
-  margin: 2;
   display: flex;
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-end;
 }
 .StatNumber {
   width: 0.45in;
   height: 0.3in;
   padding-top: 0.15in;
   text-align: center;
-  background-color: gray;
+  background-color: LightGray;
   color: black;
   font-size: 18px;
   border-radius: 50%;
@@ -130,16 +136,11 @@
   flex: 1;
 }
 .RangeStats {
-  margin-left: 1px;
-  height: 100%;
-  width: 0.45in;
-}
-.RangeStats {
   height: 100%;
   width: 0.45in;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-end;
   color: black;
 }
 .RangeItem {
