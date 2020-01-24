@@ -29,7 +29,7 @@
       "Name": "Draw Sword",
       "Type": "Active",
       "Ability": "As an action this units sprint value becomes 3, it loses the lancer ability, and it gains 5 skill for the rest of the game.",
-      "Template": "Sword Token (Put this on your Celintran Lancer your card after activating the ability)"
+      "Template": "Mount Token (Put this on your Celintran Lancer your card at the beginning of the game and remove after using ability)"
     }
   ]
 }

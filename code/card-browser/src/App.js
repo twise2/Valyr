@@ -73,15 +73,10 @@ class App extends Component {
     );
   }
 
-  render() {
-    if (!this.state.data) return null;
+  Card(index) {
     return (
-      <div className="App">
-        {this.state.data.map((card, index) => {
-          let Identity = this.state.data[index].Identity;
-          return (
-            <div className="HorizontalFlex">
-              {/*
+      <div className="HorizontalFlex">
+        {/*
               {this.state.mouseMoving ? (
                 <img
                   src={chevron_up}
@@ -92,74 +87,77 @@ class App extends Component {
                 />
               ) : null}
           */}
-              <div className="Card">
-                <header className="CardHeader">
-                  <text
-                    numberOfLines={1}
-                    adjustsFontSizeToFit={true}
-                    className="CardName">
-                    {this.state.data[index].Identity.Name}
-                  </text>
-                  <div className="HealthContainer">
-                    {this.state.data[index].Combat.Health}
-                  </div>
-                </header>
-                <header className="ContentBody">
-                  <header className="Content">
-                    <div className="CharacterIdentity">
-                      {Identity.Size}-{Identity.Type}
-                      {'\n'}
-                      {Identity.Dynasty} - {Identity.Species} - {Identity.Class}
-                    </div>
-                    <div className="Abilities">
-                      {this.state.data[index].Abilities.map(ability => {
-                        return (
-                          <div>
-                            <div className="AbilityHeader">
-                              {ability.Name} - {ability.Type}
-                            </div>
-                            <div className="AbilityText">{ability.Ability}</div>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </header>
-                  <header className="Stats">
-                    {this.RangeStats(index)}
-                    <div className="Stat">
-                      <div className="StatNumber">
-                        {this.state.data[index].Combat.Attack}
-                      </div>
-                      <img src={attack_icon} className="StatIcon" />
-                    </div>
-                    <div className="Stat">
-                      <div className="StatNumber">
-                        {this.state.data[index].Combat.Defense}
-                      </div>
-                      <img src={defense_icon} className="StatIcon" />
-                    </div>
-                    <div className="Stat">
-                      <div className="StatNumber">
-                        {this.state.data[index].Combat.Energy}
-                      </div>
-                      <img src={energy_icon} className="StatIcon" />
-                    </div>
-                    <div className="Stat">
-                      <div className="StatNumber">
-                        {this.state.data[index].Combat.Movement}
-                      </div>
-                      <img src={move_icon} className="StatIcon" />
-                    </div>
-                    <div className="Stat">
-                      <div className="StatNumber">
-                        {this.state.data[index].Combat.Appraisal}
-                      </div>
-                      <img src={appraisal_icon} className="StatIcon" />
-                    </div>
-                  </header>
-                </header>
+        <div className="Card">
+          <header className="CardHeader">
+            <text
+              numberOfLines={1}
+              adjustsFontSizeToFit={true}
+              className="CardName">
+              {this.state.data[index].Identity.Name}
+            </text>
+            <div className="HealthContainer">
+              {this.state.data[index].Combat.Health}
+            </div>
+          </header>
+          <header className="ContentBody">
+            <header className="Content">
+              <div className="CharacterIdentity">
+                {this.state.data[index].Identity.Size}-
+                {this.state.data[index].Identity.Type}
+                {'\n'}
+                {this.state.data[index].Identity.Dynasty} -{' '}
+                {this.state.data[index].Identity.Species} -{' '}
+                {this.state.data[index].Identity.Class}
               </div>
-              {/*
+              <div className="Abilities">
+                {this.state.data[index].Abilities.map(ability => {
+                  return (
+                    <div>
+                      <div className="AbilityHeader">
+                        {ability.Name} - {ability.Type}
+                      </div>
+                      <div className="AbilityText">{ability.Ability}</div>
+                    </div>
+                  );
+                })}
+              </div>
+            </header>
+            <header className="Stats">
+              {this.RangeStats(index)}
+              <div className="Stat">
+                <div className="StatNumber">
+                  {this.state.data[index].Combat.Attack}
+                </div>
+                <img src={attack_icon} className="StatIcon" />
+              </div>
+              <div className="Stat">
+                <div className="StatNumber">
+                  {this.state.data[index].Combat.Defense}
+                </div>
+                <img src={defense_icon} className="StatIcon" />
+              </div>
+              <div className="Stat">
+                <div className="StatNumber">
+                  {this.state.data[index].Combat.Energy}
+                </div>
+                <img src={energy_icon} className="StatIcon" />
+              </div>
+              <div className="Stat">
+                <div className="StatNumber">
+                  {this.state.data[index].Combat.Movement}
+                </div>
+                <img src={move_icon} className="StatIcon" />
+              </div>
+              <div className="Stat">
+                <div className="StatNumber">
+                  {this.state.data[index].Combat.Appraisal}
+                </div>
+                <img src={appraisal_icon} className="StatIcon" />
+              </div>
+            </header>
+          </header>
+        </div>
+        {/*
                 {this.state.mouseMoving ? (
                 <img
                   src={chevron_up}
@@ -170,8 +168,18 @@ class App extends Component {
                 />
               ) : null}
               */}
-            </div>
-          );
+      </div>
+    );
+  }
+
+  render() {
+    if (!this.state.data) return null;
+    return (
+      <div className="App">
+        {this.state.data.map((card, index) => {
+          if (this.state.data[index].Identity.Type == 'Conscript') {
+            return this.Card(index);
+          }
         })}
       </div>
     );
