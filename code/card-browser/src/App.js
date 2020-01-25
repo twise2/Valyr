@@ -177,9 +177,9 @@ class App extends Component {
     return (
       <div className="App">
         {this.state.data.map((card, index) => {
-          if (this.state.data[index].Identity.Type == 'Conscript') {
+          //if (this.state.data[index].Identity.Type == 'Conscript') {
             return this.Card(index);
-          }
+          //}
         })}
       </div>
     );
