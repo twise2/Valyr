@@ -1,4 +1,4 @@
-.App {
+.CardViewer {
   font-family: 'Herculanum';
   background-color: LightGray;
   display: flex;
@@ -13,18 +13,14 @@
   flex-direction: row;
   width: 8.5in;
   height: 11in;
+  margin: 10px;
   align-items: center;
   justify-content: center;
 }
 .Card {
-  flex-shrink: 0;
   background-color: white;
-  max-height: 5.3in;
-  max-width: 4.0in;
-  min-height: 5.3in;
-  min-width: 4.0in;
-  height: 100%;
-  width: 100%;
+  height: 5.3in;
+  width: 4.0in;
   border-style: solid;
   border-size: 1px;
   border-color: DarkGray;
@@ -72,9 +68,9 @@
   border-width: 1px;
 }
 .ContentBody {
+  display: flex;
   width: 100%;
   height: 100%;
-  display: flex;
   flex-direction: row;
 }
 .Content {
@@ -85,6 +81,7 @@
   justify-content: space-between;
 }
 .CharacterIdentity {
+
   white-space: pre;
   margin-left: 8px;
   margin-top: -13px;
