@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import Card from './Card.js';
+import './Card.css';
 import './Printable.css';
 
 class Printable extends Component {
@@ -6,20 +8,20 @@ class Printable extends Component {
     super(props);
     this.state = {
       data: null,
-      currentIndex: 0,
-      mouseMoving: true,
     };
   }
 
   componentWillMount() {
-    return 1;
+    const {cardName} = this.props.match.params;
+    console.log('card',cardName)
+    fetch(`/unit/${cardName}`)
+      .then(response => response.json())
+      .then(data => this.setState({data}));
   }
 
   render() {
-    return (
-      <div>
-      </div>
-    );
+    if (!this.state.data) return null;
+    return <Card data={this.state.data}></Card>
   }
 }
 

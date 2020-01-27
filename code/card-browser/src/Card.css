@@ -1,5 +1,4 @@
 .CardViewer {
-  font-family: 'Herculanum';
   background-color: LightGray;
   display: flex;
   flex-direction: column;
@@ -18,6 +17,7 @@
   justify-content: center;
 }
 .Card {
+  font-family: 'Herculanum';
   background-color: white;
   height: 5.3in;
   width: 4.0in;
