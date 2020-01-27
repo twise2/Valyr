@@ -42,15 +42,25 @@ class App extends Component {
     this.setState({currentIndex: newIndex});
   }
 
-  RangeModifier(ranges) {
+  AttackModifier(rangeModifier, cardIndex) {
+    let attackStat = this.state.data[cardIndex].Combat.Attack
+    let [strengthStat,skillStat] = attackStat.split('-')
+    let [strengthModifier,skillModifier] = rangeModifier .split('/')
+
+    strengthStat = parseInt(strengthStat)+parseInt(strengthModifier) || 'X'
+    skillStat = parseInt(skillStat)+parseInt(skillModifier) || 'X'
+    return (
+      <div className="RangeItem">
+        <div className="RangeModifier">{strengthStat}-{skillStat}</div>
+      </div>
+    );
+  }
+
+  RangeModifier(ranges, cardIndex) {
     return ranges.reverse().map((range, index) => {
       //print the range modifier
       if (index % 2 !== 0) {
-        return (
-          <div className="RangeItem">
-            <div className="RangeModifier">{range}</div>
-          </div>
-        );
+        return this.AttackModifier(range, cardIndex);
       }
       //print the range number
       else {
@@ -67,8 +77,11 @@ class App extends Component {
         style={{
           alignItems: 'flex-end',
         }}>
-        <div className="RangeStats">{this.RangeModifier(ranges)}</div>
-        <img src={range_icon} className="StatIcon" />
+        <div className="RangeStats">{this.RangeModifier(ranges, index)}</div>
+        <div className="RangeIcons">
+          <img src={range_icon} className="StatIcon" />
+          <img src={attack_icon} className="StatIcon" />
+        </div>
       </div>
     );
   }
@@ -126,12 +139,6 @@ class App extends Component {
               {this.RangeStats(index)}
               <div className="Stat">
                 <div className="StatNumber">
-                  {this.state.data[index].Combat.Attack}
-                </div>
-                <img src={attack_icon} className="StatIcon" />
-              </div>
-              <div className="Stat">
-                <div className="StatNumber">
                   {this.state.data[index].Combat.Defense}
                 </div>
                 <img src={defense_icon} className="StatIcon" />
@@ -178,7 +185,7 @@ class App extends Component {
       <div className="App">
         {this.state.data.map((card, index) => {
           //if (this.state.data[index].Identity.Type == 'Conscript') {
-            return this.Card(index);
+          return this.Card(index);
           //}
         })}
       </div>

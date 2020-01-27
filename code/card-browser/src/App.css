@@ -138,6 +138,13 @@
   flex: 1;
   align-items: flex-end;
 }
+.RangeIcons {
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+}
 .RangeStats {
   height: 100%;
   width: 0.45in;
