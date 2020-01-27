@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Card from './Card.js';
-import './Card.css';
-import './Printable.css';
+import './css/Printable.css';
 
 class Printable extends Component {
   constructor(props) {

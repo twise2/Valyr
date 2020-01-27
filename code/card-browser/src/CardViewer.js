@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import Card from './Card.js';
-import './Card.css';
+import './css/CardViewer.css';
 
 import chevron_up from './icons/up-chevron.svg';
 

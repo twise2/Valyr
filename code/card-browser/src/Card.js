@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './Card.css';
+import './css/Card.css';
 
 //Icons
 import attack_icon from './icons/attack_icon.svg';

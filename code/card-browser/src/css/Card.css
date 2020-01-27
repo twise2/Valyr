@@ -1,21 +1,3 @@
-.CardViewer {
-  background-color: LightGray;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-}
-.HorizontalFlex {
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  width: 8.5in;
-  height: 11in;
-  margin: 10px;
-  align-items: center;
-  justify-content: center;
-}
 .Card {
   font-family: 'Herculanum';
   background-color: white;
@@ -172,6 +154,4 @@
 .RangeNumber {
   font-size: 20px;
   font-style: bold;
-}
-.RangeModifier {
 }
