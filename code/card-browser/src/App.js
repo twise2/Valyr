@@ -51,7 +51,7 @@ class App extends Component {
     skillStat = parseInt(skillStat)+parseInt(skillModifier) || 'X'
     return (
       <div className="RangeItem">
-        <div className="RangeModifier">{strengthStat}-{skillStat}</div>
+        <div className="AttackModifier">{strengthStat}-{skillStat}</div>
       </div>
     );
   }

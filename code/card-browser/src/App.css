@@ -163,6 +163,11 @@
   justify-content: flex-end;
   margin-bottom: -1px;
 }
+.AttackModifier {
+  padding: 4px;
+  font-size: 16px;
+  background-color: lightgray;
+}
 .RangeModifier {
   padding: 4px;
   font-size: 16px;

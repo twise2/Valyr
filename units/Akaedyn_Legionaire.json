@@ -1,9 +1,9 @@
 {
   "Identity": {
-    "Name": "Valyr Legionnaire",
+    "Name": "Akaedyn Legionnaire",
     "Basic_Description": "Silver clad knights with blue turtle shields and blue plumes equipped with long swords",
     "Description": "",
-    "Dynasty": "Valyr",
+    "Dynasty": "Akaedour",
     "Type": "Conscript",
     "Class": "Knight",
     "Species": "Human",
@@ -22,7 +22,7 @@
     {
       "Name" : "Legion Wall",
       "Type": "Passive",
-      "Ability": "Each unit within 1 range of Valyr Legionnaire Gain +1 Block."
+      "Ability": "Each unit within 1 range of Akaedyn Legionnaire Gain +1 Block."
     }
   ]
 }

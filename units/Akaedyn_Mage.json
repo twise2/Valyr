@@ -1,9 +1,9 @@
 {
   "Identity": {
-    "Name": "Valyran Mage",
+    "Name": "Akaedyn Mage",
     "Basic_Description": "Hooded Mage in Red",
     "Description": "",
-    "Dynasty": "Valyr",
+    "Dynasty": "Akaedour",
     "Type": "Conscript",
     "Class": "Mage",
     "Species": "Human",
@@ -22,7 +22,7 @@
     {
       "Name": "Fireball",
       "Type": "Active",
-      "Ability": "Cost 2 Energy: Choose an enemy unit within 7 range of Valyran Mage. Roll a d20. On a roll above 10, assign 1 distress to that unit."
+      "Ability": "Cost 2 Energy: Choose an enemy unit within 7 range of Akaedyn Mage. Roll a d20. On a roll above 10, assign 1 distress to that unit."
     },
     {
       "Name": "Meteor",
