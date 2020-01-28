@@ -1,0 +1,13 @@
+.PrintableSheet {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 11in;
+  height: 8.25in;
+  background-color: white;
+  border-style: solid;
+  border-size: 1px;
+  border-color: DarkGray;
+  color: white;
+}

@@ -54,7 +54,6 @@ class Card extends Component {
         <div className="RangeStats">{this.RangeModifier(ranges, cardData)}</div>
         <div className="RangeIcons">
           <img src={range_icon} className="StatIcon" />
-          <img src={attack_icon} className="StatIcon" />
         </div>
       </div>
     );
@@ -97,6 +96,10 @@ class Card extends Component {
           </div>
           <div className="Stats">
             {this.RangeStats(cardData)}
+            <div className="Stat">
+              <div className="StatNumber">{cardData.Combat.Attack}</div>
+              <img src={attack_icon} className="StatIcon" />
+            </div>
             <div className="Stat">
               <div className="StatNumber">{cardData.Combat.Defense}</div>
               <img src={defense_icon} className="StatIcon" />

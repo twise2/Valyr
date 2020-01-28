@@ -8,6 +8,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 //don't touch dirname before build
 const directoryPath = path.join(__dirname + '../../../units/');
 
+app.use('/templates', express.static(__dirname + '/templates'))
 
 app.get('/units', function(req, res) {
   return fs.readdir(directoryPath, function(err, files) {
@@ -18,6 +19,7 @@ app.get('/units', function(req, res) {
     return res.send(files);
   });
 });
+
 
 app.get('/unit/:cardName', function(req, res) {
   contents = fs.readFileSync(directoryPath + req.params.cardName, 'utf8');
