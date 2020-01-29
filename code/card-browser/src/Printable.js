@@ -10,7 +10,7 @@ class Printable extends Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const {cardName} = this.props.match.params;
     fetch(`/unit/${cardName}`)
       .then(response => response.json())
@@ -18,7 +18,6 @@ class Printable extends Component {
   }
 
   renderCard() {
-    console.log(this.props.match.params)
     return (
       <div className="PrintableSheet">
         <Card data={this.props.match.params.cardName}></Card>;
@@ -34,8 +33,6 @@ class Printable extends Component {
         if (ability.Template.includes('(')) {
           ability.Template = ability.Template.split('(')[0];
         }
-
-        console.log(ability.Template);
         templates.push(
           ability.Template.trim()
             .replace(' ', '_')
@@ -44,17 +41,16 @@ class Printable extends Component {
       }
     });
     //return only distinct templates
-    return [...new Set(templates)]
+    return [...new Set(templates)];
   }
 
   renderTemplates() {
     const templates = this.getTemplates(this.state.data);
-    console.log('templates', templates);
     return templates.map(template => {
       let img_src = `/templates/${template}.svg`;
       return (
-        <div className="PrintableSheet">
-          <img  src={img_src} />
+        <div key={template} className="PrintableSheet">
+          <img alt="svg of the each ability" src={img_src} />
         </div>
       );
     });

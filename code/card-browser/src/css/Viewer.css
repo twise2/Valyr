@@ -1,0 +1,37 @@
+.CardViewer {
+  font-family: 'Herculanum';
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.HorizontalFlex {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  width: 8.5in;
+  height: 11in;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.VerticalFlex {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.PrintButton {
+  color: white;
+  background-color: gray;
+  padding: 4px;
+  margin: 4px;
+  border: 2px solid gray;
+  border-radius: 10%;
+}

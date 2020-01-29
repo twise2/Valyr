@@ -10,7 +10,7 @@ const directoryPath = path.join(__dirname + '../../../units/');
 
 app.use('/templates', express.static(__dirname + '/templates'))
 
-app.get('/units', function(req, res) {
+app.get('/unitNames', function(req, res) {
   return fs.readdir(directoryPath, function(err, files) {
     //handling error
     if (err) {
@@ -20,6 +20,22 @@ app.get('/units', function(req, res) {
   });
 });
 
+app.get('/units', function(req, res) {
+  let data = {};
+  fs.readdir(directoryPath, function(err, files) {
+    //handling error
+    if (err) {
+      return console.log('Unable to scan directory: ' + err);
+    }
+    console.log('Printing All Parsing Errors...');
+    //listing all files using forEach
+    files.forEach(function(file) {
+      contents = fs.readFileSync(directoryPath + file, 'utf8')
+      data[file]=(JSON.parse(contents));
+    });
+    return res.send(data);
+  });
+});
 
 app.get('/unit/:cardName', function(req, res) {
   contents = fs.readFileSync(directoryPath + req.params.cardName, 'utf8');

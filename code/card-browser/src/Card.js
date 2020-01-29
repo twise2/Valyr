@@ -17,23 +17,25 @@ class Card extends Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     fetch(`/unit/${this.props.data}`)
       .then(response => response.json())
       .then(currentUnit => this.setState({currentUnit}));
   }
 
-  AttackModifier(rangeModifier, cardData) {
-    let attackStat = cardData.Combat.Attack;
-    let [strengthStat, skillStat] = attackStat.split('-');
+  AttackModifier(index, rangeModifier, cardData) {
+    //let attackStat = cardData.Combat.Attack;
+    //let [strengthStat, skillStat] = attackStat.split('-');
     let [strengthModifier, skillModifier] = rangeModifier.split('/');
 
-    strengthStat = parseInt(strengthStat) + parseInt(strengthModifier) || 'X';
-    skillStat = parseInt(skillStat) + parseInt(skillModifier) || 'X';
+    //strengthStat = parseInt(strengthStat) + parseInt(strengthModifier) || 'X';
+    //skillStat = parseInt(skillStat) + parseInt(skillModifier) || 'X';
     return (
-      <div className="RangeItem">
+      <div key={index} className="RangeItem">
         <div className="AttackModifier">
-          {strengthStat}-{skillStat}
+          {strengthModifier !== '0' ? strengthModifier : '-'}
+          /
+          {skillModifier !== '0' ? skillModifier : '-'}
         </div>
       </div>
     );
@@ -43,11 +45,15 @@ class Card extends Component {
     return ranges.reverse().map((range, index) => {
       //print the range modifier
       if (index % 2 !== 0) {
-        return this.AttackModifier(range, cardData);
+        return this.AttackModifier(index, range, cardData);
       }
       //print the range number
       else {
-        return <div className="RangeNumber">{range}</div>;
+        return (
+          <div key={index} className="RangeNumber">
+            {range}
+          </div>
+        );
       }
     });
   }
@@ -62,7 +68,7 @@ class Card extends Component {
         }}>
         <div className="RangeStats">{this.RangeModifier(ranges, cardData)}</div>
         <div className="RangeIcons">
-          <img src={range_icon} className="StatIcon" />
+          <img alt="range icon" src={range_icon} className="StatIcon" />
         </div>
       </div>
     );
@@ -88,9 +94,9 @@ class Card extends Component {
               {cardData.Identity.Class}
             </div>
             <div className="Abilities">
-              {cardData.Abilities.map(ability => {
+              {cardData.Abilities.map((ability, index) => {
                 return (
-                  <div>
+                  <div key={index}>
                     <div className="AbilityHeader">
                       {ability.Name} - {ability.Type}
                     </div>
@@ -104,23 +110,23 @@ class Card extends Component {
             {this.RangeStats(cardData)}
             <div className="Stat">
               <div className="StatNumber">{cardData.Combat.Attack}</div>
-              <img src={attack_icon} className="StatIcon" />
+              <img alt="attack icon" src={attack_icon} className="StatIcon" />
             </div>
             <div className="Stat">
               <div className="StatNumber">{cardData.Combat.Defense}</div>
-              <img src={defense_icon} className="StatIcon" />
+              <img alt="defense icon" src={defense_icon} className="StatIcon" />
             </div>
             <div className="Stat">
               <div className="StatNumber">{cardData.Combat.Energy}</div>
-              <img src={energy_icon} className="StatIcon" />
+              <img alt="energy icon" src={energy_icon} className="StatIcon" />
             </div>
             <div className="Stat">
               <div className="StatNumber">{cardData.Combat.Movement}</div>
-              <img src={move_icon} className="StatIcon" />
+              <img alt="move icon" src={move_icon} className="StatIcon" />
             </div>
             <div className="Stat">
               <div className="StatNumber">{cardData.Combat.Appraisal}</div>
-              <img src={appraisal_icon} className="StatIcon" />
+              <img alt="cost icon" src={appraisal_icon} className="StatIcon" />
             </div>
           </div>
         </div>

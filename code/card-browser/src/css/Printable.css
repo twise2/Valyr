@@ -1,4 +1,5 @@
 .PrintableSheet {
+  font-family: 'Herculanum';
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
