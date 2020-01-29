@@ -12,6 +12,15 @@ import appraisal_icon from './icons/appraisal_icon.svg';
 class Card extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      currentUnit: null,
+    };
+  }
+
+  componentWillMount() {
+    fetch(`/unit/${this.props.data}`)
+      .then(response => response.json())
+      .then(currentUnit => this.setState({currentUnit}));
   }
 
   AttackModifier(rangeModifier, cardData) {
@@ -67,10 +76,7 @@ class Card extends Component {
     return (
       <div className="Card">
         <div className="CardHeader">
-          <div
-            className="CardName">
-            {cardData.Identity.Name}
-          </div>
+          <div className="CardName">{cardData.Identity.Name}</div>
           <div className="HealthContainer">{cardData.Combat.Health}</div>
         </div>
         <div className="ContentBody">
@@ -123,7 +129,8 @@ class Card extends Component {
   }
 
   render() {
-      return this.Card(this.props.data);
+    if (!this.state.currentUnit) return null;
+    return this.Card(this.state.currentUnit);
   }
 }
 

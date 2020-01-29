@@ -10,73 +10,30 @@ class CardViewer extends Component {
     super(props);
     this.state = {
       units: null,
-      currentUnit: null,
-      currentIndex: 0,
     };
   }
 
   componentWillMount() {
     fetch('/units')
       .then(response => response.json())
-      .then(units =>
-        this.setState({units}, () => {
-          const cardName = this.state.units[this.state.currentIndex];
-          fetch(`/unit/${cardName}`)
-            .then(response => response.json())
-            .then(currentUnit => this.setState({currentUnit}));
-        }),
-      );
-  }
-
-  nextCard() {
-    let newIndex = this.state.currentIndex + 1;
-    if (newIndex >= this.state.units.length) {
-      newIndex = 0;
-    }
-    this.setState({currentIndex: newIndex}, () => {
-      const cardName = this.state.units[this.state.currentIndex];
-      fetch(`/unit/${cardName}`)
-        .then(response => response.json())
-        .then(currentUnit => this.setState({currentUnit}));
-    });
-  }
-
-  lastCard() {
-    let newIndex = this.state.currentIndex - 1;
-    if (newIndex <= 0) {
-      newIndex = this.state.units.length - 1;
-    }
-    this.setState({currentIndex: newIndex}, () => {
-      const cardName = this.state.units[this.state.currentIndex];
-      fetch(`/unit/${cardName}`)
-        .then(response => response.json())
-        .then(currentUnit => this.setState({currentUnit}));
-    });
+      .then(units => this.setState({units}));
   }
 
   render() {
-    if (!this.state.currentUnit) return null;
+    if (!this.state.units) return null;
     return (
       <div className="CardViewer">
-        <div className="HorizontalFlex">
-          <img
-            src={chevron_up}
-            className="StatIcon"
-            style={{transform: 'rotate(270deg)', flex: 1}}
-            onClick={() => this.lastCard()}
-          />
-          <Link
-            style={{textDecoration: 'none'}}
-            to={`/card/${this.state.units[this.state.currentIndex]}`}>
-            <Card data={this.state.currentUnit}></Card>
-          </Link>
-          <img
-            src={chevron_up}
-            className="StatIcon"
-            style={{transform: 'rotate(90deg)', flex: 1}}
-            onClick={() => this.nextCard()}
-          />
-        </div>
+        {this.state.units.map((cardName, index) => {
+          return (
+            <div className="HorizontalFlex">
+              <Link
+                style={{textDecoration: 'none'}}
+                to={`/card/${this.state.units[index]}`}>
+                <Card data={cardName}></Card>
+              </Link>
+            </div>
+          );
+        })}
       </div>
     );
   }

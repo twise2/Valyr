@@ -18,9 +18,10 @@ class Printable extends Component {
   }
 
   renderCard() {
+    console.log(this.props.match.params)
     return (
       <div className="PrintableSheet">
-        <Card data={this.state.data}></Card>;
+        <Card data={this.props.match.params.cardName}></Card>;
       </div>
     );
   }
