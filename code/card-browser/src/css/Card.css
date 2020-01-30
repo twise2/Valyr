@@ -2,7 +2,7 @@
   font-family: 'Herculanum';
   background-color: white;
   height: 4.9in;
-  width: 3.5in;
+  width: 3.7in;
   border-style: solid;
   border-size: 1px;
   border-color: DarkGray;
@@ -109,20 +109,22 @@
   text-align: center;
   background-color: LightGray;
   color: black;
+  margin: 1px;
   font-size: 18px;
   border-radius: 50%;
   border: 1px solid black;
 }
 .StatIcon {
   flex: 1;
-  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 .RangeIcons {
   flex: 1;
   flex-direction: column;
   display: flex;
   justify-content: flex-end;
-  /*padding-bottom: 10px;*/
 }
 .RangeStats {
   height: 100%;
@@ -144,7 +146,7 @@
 }
 .AttackModifier {
   padding: 4px;
-  font-size: 16px;
+  font-size: 12px;
   background-color: white;
 }
 .RangeModifier {

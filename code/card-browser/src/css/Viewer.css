@@ -7,6 +7,21 @@
   justify-content: center;
   margin: auto;
 }
+.SearchBar {
+  width: 100%;
+  color: white;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  background-color: white;
+  color: black;
+  justify-content: flex-start;
+  align-items: center;
+}
+.SearchBarText {
+  color: black;
+  padding: 10px;
+}
 .HorizontalFlex {
   flex: 1;
   display: flex;

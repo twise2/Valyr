@@ -15,8 +15,8 @@
     "Range": "0(0/0)1",
     "Energy": "3",
     "Movement": "3-3",
-    "Health": "1",
-    "Appraisal": "150"
+    "Health": "3",
+    "Appraisal": "175"
   },
   "Abilities": [
     {
@@ -27,7 +27,7 @@
     {
       "Name": "Meteor",
       "Type": "Active",
-      "Ability": "Cost 3 Energy: Sacrifice Ethereal Mage or An Allied Unit adjacent to them: Choose any location within 30 range. Put down the metor template and roll a d6. On a 2-6, roll the d6 again and move the template from it's center in the direction of the first d6 as marked on the template a range equal to the second d6 rolled. All units within the template take 5 distress.",
+      "Ability": "Cost 3 Energy: Sacrifice Ethereal Mage or An Allied Unit adjacent to them: Choose any location within 30 range. Put down the metor template and roll a d6. On a 2-6, roll the d6 again and move the template from it's center in the direction of the first d6 as marked on the template a range equal to the second d6 rolled. All units within the template take 5 distress. (This ability can not be used during the first round of the game)",
       "Template": "Meteor (Circle with 1-6 equidistant around the outside and radius of 3 range)"
     }
   ]
