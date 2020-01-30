@@ -25,7 +25,6 @@ class Viewer extends Component {
 
   filter() {
     //link to parameters to change so entire screen rerenders
-    console.log('filter', this.state.searchType, this.state.searchValue);
     if (this.state.searchType.length > 1 && this.state.searchValue.length > 1) {
       let newUnits = {};
       Object.keys(this.state.originalUnits).forEach(unitName => {
@@ -36,10 +35,9 @@ class Viewer extends Component {
           newUnits[unitName] = this.state.originalUnits[unitName];
         }
       });
-      console.log(newUnits)
-      this.setState({units: newUnits});
+      return this.setState({units: newUnits});
     } else {
-      this.setState({units: this.state.originalUnits});
+      return this.setState({units: this.state.originalUnits});
     }
   }
 
@@ -70,7 +68,7 @@ class Viewer extends Component {
         id="SearchType"
         value={this.state.searchType}
         onChange={event => {
-          this.setState({searchType: event.target.value, searchValue: ''});
+          this.setState({searchType: event.target.value, searchValue: ''}, () => this.filter());
         }}>
         <MenuItem value={'Dynasty'}>Dynasty</MenuItem>
         <MenuItem value={'Type'}>Type</MenuItem>
@@ -88,16 +86,16 @@ class Viewer extends Component {
         <AppBar position="sticky" className="SearchBar">
           <Toolbar className="SearchBar">
             <div className="SearchBarText">
-              Choose an characteristic to Filter By
+              Choose the filter type
             </div>
             {this.SearchTypeSelect()}
-            <div className="SearchBarText">Choose a fact to Filter By</div>
+            <div className="SearchBarText">Choose a value to Filter By</div>
             {this.SearchTypeFilter(this.state.searchType)}
           </Toolbar>
         </AppBar>
         {Object.keys(this.state.units).map((cardName, index) => {
           return (
-            <div key={index} className="HorizontalFlex">
+            <div key={cardName} className="HorizontalFlex">
               <Card data={cardName}></Card>
               <div className="VerticalFlex">
                 <div>

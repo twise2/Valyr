@@ -14,6 +14,7 @@ class Card extends Component {
     super(props);
     this.state = {
       currentUnit: null,
+      prop: null,
     };
   }
 
@@ -33,8 +34,7 @@ class Card extends Component {
     return (
       <div key={index} className="RangeItem">
         <div className="AttackModifier">
-          {strengthModifier !== '0' ? strengthModifier : '-'}
-          /
+          {strengthModifier !== '0' ? strengthModifier : '-'}/
           {skillModifier !== '0' ? skillModifier : '-'}
         </div>
       </div>
