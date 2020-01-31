@@ -15,8 +15,41 @@
   flex-direction: row;
   background-color: white;
   color: black;
+  justify-content: space-between;
+  align-items: center;
+}
+.FilterHeader {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  margin: 10px;
+  background-color: lightgray;
+  color: black;
+  justify-content: center;
+  align-items: center;
+}
+.Search {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  color: black;
   justify-content: flex-start;
   align-items: center;
+}
+.ResetButton {
+  display: flex;
+  margin: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: gray;
+  padding: 4px;
+  margin: 4px;
+  border: 2px solid gray;
+  border-radius: 10%;
 }
 .SearchBarText {
   color: black;
@@ -28,7 +61,7 @@
   flex-direction: row;
   width: 8.5in;
   height: 11in;
-  margin: 10px;
+  padding: 10px;
   align-items: center;
   justify-content: center;
 }

@@ -12,7 +12,7 @@ class Viewer extends Component {
     this.state = {
       units: null,
       originalUnits: null,
-      searchType: 'Dynasty',
+      searchType: '',
       searchValue: '',
     };
   }
@@ -21,6 +21,14 @@ class Viewer extends Component {
     fetch('/units')
       .then(response => response.json())
       .then(units => this.setState({units, originalUnits: units}));
+  }
+
+  resetSearch() {
+    this.setState({
+      units: this.state.originalUnits,
+      searchType: '',
+      searchValue: '',
+    });
   }
 
   filter() {
@@ -68,7 +76,9 @@ class Viewer extends Component {
         id="SearchType"
         value={this.state.searchType}
         onChange={event => {
-          this.setState({searchType: event.target.value, searchValue: ''}, () => this.filter());
+          this.setState({searchType: event.target.value, searchValue: ''}, () =>
+            this.filter(),
+          );
         }}>
         <MenuItem value={'Dynasty'}>Dynasty</MenuItem>
         <MenuItem value={'Type'}>Type</MenuItem>
@@ -85,17 +95,28 @@ class Viewer extends Component {
       <div className="CardViewer">
         <AppBar position="sticky" className="SearchBar">
           <Toolbar className="SearchBar">
-            <div className="SearchBarText">
-              Choose the filter type
+            <div className="Search">
+              <div className="SearchBarText">Choose the filter type</div>
+              {this.SearchTypeSelect()}
+              <div className="SearchBarText">Choose a value to Filter By</div>
+              {this.SearchTypeFilter(this.state.searchType)}
             </div>
-            {this.SearchTypeSelect()}
-            <div className="SearchBarText">Choose a value to Filter By</div>
-            {this.SearchTypeFilter(this.state.searchType)}
+            <div className="ResetButton" onClick={() => this.resetSearch()}>
+              Reset Filters
+            </div>
           </Toolbar>
         </AppBar>
+        <div className="FilterHeader">
+          {`showing ${Object.keys(this.state.units).length} ${
+            this.state.searchValue
+          } units`}
+        </div>
         {Object.keys(this.state.units).map((cardName, index) => {
           return (
-            <div key={cardName} className="HorizontalFlex">
+            <div
+              key={cardName}
+              className="HorizontalFlex"
+              style={{borderTop: '1px solid black'}}>
               <Card data={cardName}></Card>
               <div className="VerticalFlex">
                 <div>
@@ -105,6 +126,7 @@ class Viewer extends Component {
                 <Link
                   className="PrintButton"
                   style={{textDecoration: 'none'}}
+                  target="_blank"
                   to={`/card/${cardName}`}>
                   {'Click Here To Print Me'}
                 </Link>

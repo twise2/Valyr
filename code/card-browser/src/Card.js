@@ -24,6 +24,37 @@ class Card extends Component {
       .then(currentUnit => this.setState({currentUnit}));
   }
 
+  //set background colors by unit type (no color should have over .5 opacity unless it is white)
+  backgroundGradient(unit) {
+    //Celintra colors
+    if (unit.Identity.Dynasty === 'Celintra') {
+      return {
+        background:
+          'linear-gradient(to right bottom, rgba(0, 0, 255, 0.2), rgba(218, 165, 132, 0.5))',
+      };
+    }
+    //Akaedour colors
+    if (unit.Identity.Dynasty === 'Akaedour') {
+      return {
+        background:
+          'linear-gradient(to left, rgba(150, 40, 27, 0.5), rgba(0, 0, 0, .3))',
+      };
+    }
+    //Olanta colors
+    if (unit.Identity.Dynasty === 'Olanta') {
+      return {
+        background:
+          'linear-gradient(to bottom right, rgba(150, 40, 27, .5), rgba(220, 85, 57, .4))',
+      };
+    }
+    //Neutral Colors
+    else {
+      return {
+        background:
+          'linear-gradient(to right bottom, rgb(34,139,34, .4), rgba(255, 255, 255, 0))',
+      };
+    }
+  }
   AttackModifier(index, rangeModifier, cardData) {
     //let attackStat = cardData.Combat.Attack;
     //let [strengthStat, skillStat] = attackStat.split('-');
@@ -80,7 +111,7 @@ class Card extends Component {
     }
 
     return (
-      <div className="Card">
+      <div className="Card" style={this.backgroundGradient(cardData)}>
         <div className="CardHeader">
           <div className="CardName">{cardData.Identity.Name}</div>
           <div className="HealthContainer">{cardData.Combat.Health}</div>

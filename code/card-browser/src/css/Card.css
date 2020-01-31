@@ -25,15 +25,15 @@
 
 .CardName {
   width: 80%;
-  margin-left: 8px;
   align-items: center;
-  background-color: rgb(47, 47, 47);
+  background-color: rgba(105,105,105,.6);
   color: white;
   text-align: center;
   padding: 10px;
   margin-right: -20px;
-  padding-right: 34px;
+  padding-right: 30px;
   font-weight: bold;
+  font-size: 17px;
   border-width: 1px;
 }
 .HealthContainer {
@@ -63,13 +63,13 @@
   justify-content: space-between;
 }
 .CharacterIdentity {
-
   white-space: pre;
-  margin-left: 8px;
-  margin-top: -13px;
-  border: 1px solid LightGray;
-  color: black;
-  font-size: 14px;
+  padding: 2px;
+  margin-top: -12px;
+  border: 1px solid rgba(105,105,105,.6);
+  border-top: 0px;
+  color: white;
+  font-size: 12px;
 }
 .Abilities {
   background-color: LightGray;
@@ -78,12 +78,13 @@
   padding: 1px;
 }
 .AbilityHeader {
+  -webkit-text-stroke: 1px black;
   color: white;
   font-size: 14px;
 }
 .AbilityText {
   color: black;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 1px;
 }
 .Stats {
@@ -147,7 +148,7 @@
 .AttackModifier {
   padding: 4px;
   font-size: 12px;
-  background-color: white;
+  background-color: lightgray;
 }
 .RangeModifier {
   padding: 4px;

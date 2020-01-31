@@ -20,32 +20,27 @@
   },
   "Abilities": [
      {
-      "Name": "Ammunition",
-      "Type": "Passive",
-      "Ability": "Uzrill starts the game with 3 vial tokens on his character. These can be used for other Abilities.",
+      "Name": "Concoct",
+      "Type": "Active",
+      "Ability": "Cost 4 energy: If you have less than 3 vial tokens, add one vial token to this unit. Start the game with 3 vial tokens on this unit",
       "Template": "Vial Token"
     },
     {
       "Name": "Vial of Borax",
       "Type": "Active",
-      "Ability": "Cost 1 Vial Token: Once per turn as an action, choose a character withing 10 range. Roll a d20. On a roll higher than 10, that character takes 1 distress. Then keep repeating this ability for the cloest character within 3 range of the last hit character if that has not been targeted yet this turn."
+      "Ability": "Cost 1 Vial Token: Once per turn as an action, choose a unit within 10 range. Roll a d20. On a roll lower than 10, that unit takes 1 distress. Repeat this ability for the closest unit within 3 range of the chosen unit if that has not been targeted yet this turn."
     },
     {
       "Name": "Vial of Smoke",
       "Type": "Active",
-      "Ability": "Cost 1 Vial Token: Once per turn as an action, Choose a location within 7 range of Uzrill and put a Smoke Bomb template on it. All line of site and movement Abilities within within 5 range of of that template are blocked. Remove this bomb at the start of Uzrills next turn.",
+      "Ability": "Cost 1 Vial Token: Once per turn as an action, Choose a location within 7 range. Put a Smoke Bomb template on it. All line of site and movement abilities within within 5 range of of that template are blocked. Remove this token at the start of Uzrill's next turn.",
       "Template": "Smoke Bomb"
     },
     {
       "Name": "Vial of Incense",
       "Type": "Active",
-      "Ability": "Cost 1 Vial Token: Once per turn as an action, Choose a location  within 7 range of Uzrill and put an Incense Template on it. Any unit starting its turn or that moves within 3 range of the token loses 1 energy that turn. (This ability cannot reduce a units energy below 1)",
+      "Ability": "Cost 1 Vial Token: Once per turn as an action, Choose a location  within 7 range of Uzrill. Put an Incense Template on it. Any unit starting its turn or that moves within 3 range of the token loses 1 energy that turn. (energy cannot be reduced below 1)",
       "Template": "Incense"
-    },
-    {
-      "Name": "Concoct",
-      "Type": "Active",
-      "Ability": "Cost 4 energy: Add one vial token to Uzrill's character. You cannot have more than 3 vial tokens at one time."
     }
   ]
 }
