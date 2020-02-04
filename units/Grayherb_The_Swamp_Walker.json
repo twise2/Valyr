@@ -9,7 +9,7 @@
     "Type": "Champion",
     "Class": "Berserker",
     "Species": "Human",
-    "Size": "large"
+    "Size": "Large"
   },
   "Combat": {
     "Attack": "3-10",

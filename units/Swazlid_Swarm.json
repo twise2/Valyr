@@ -9,7 +9,7 @@
     "Type": "Conscript",
     "Class": "Soldier",
     "Species": "Lizard",
-    "Size": "token"
+    "Size": "Token"
   },
   "Combat": {
     "Attack": "1-1",
