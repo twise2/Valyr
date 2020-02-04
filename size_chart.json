@@ -3,10 +3,10 @@
   "Tiny": "~14mm",
   "Small": "~21mm",
   "Medium": "~28mm",
-  "Large": "~35mm",
-  "Giant": "~45mm",
-  "Massive": "~55mm",
-  "Colossal": "~>70mm",
+  "Large": "~45mm",
+  "Giant": "~70mm",
+  "Massive": "~100mm",
+  "Colossal": "~>150mm",
   "Immense": "large models on scale of moving fortresses"
 },
 "Notes": {
