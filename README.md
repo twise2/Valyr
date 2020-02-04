@@ -35,15 +35,15 @@ When a turn begins, a player may take a number of actions less than or equal to 
 
 There are three types of actions a unit can take
 
-1. "Move"
-2. "Attack"
-3. "Use an Ability"
+1. ["Move"](#move-action)
+2. ["Attack"](#attack-action)
+3. ["Use an Ability"](ability-action)
 
 After a player has completed their units actions for a turn, the turn is passed and the player to their left takes a turn.
 
 ### Actions
 
-#### Move Actions
+#### Move Action
 If the move action is chosen, the player will look at their unit's movement stat (marked by the winged boots icon) pick up their unit and place it back down within it's movement range.
 
 ![Screenshot](Images/movement.png)
