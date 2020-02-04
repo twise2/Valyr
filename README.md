@@ -101,7 +101,7 @@ The defender takes 1 damage and the attack ends.
 
 A unit can have two types of abilites passive and active. 
 
-A passive abity is not an action. it is an effect that modifies the state of the board.
+A passive ability is not an action. it is an effect that modifies the state of the board.
 
 As an an action, a unit can use an active ability described on their card, doing what is described in the ability's text.
 
