@@ -93,7 +93,7 @@ Lets say the target also has block 3 and dodge 1.
 
 ![Screenshot](Images/defense-only.png)
 
-Alaestos rolls 4 dice (4 calculated strength), rolling a 7,10, 12, and 15.
+Alaestos rolls 4 dice (4 calculated strength), rolling a 7, 10, 12, and 15.
 
 ![Screenshot](Images/rolls.png)
 
