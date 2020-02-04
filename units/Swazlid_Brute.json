@@ -1,0 +1,30 @@
+{
+  "Identity": {
+    "Name": "Swazlid Brute",
+    "Basic_Description": "heavy set veliociraptor looking dinosaurs but with graspier hands and wider body/faces",
+    "Quote": "",
+    "Description": "",
+    "Images": [],
+    "Dynasty": "Swazlid",
+    "Type": "Conscript",
+    "Class": "Soldier",
+    "Species": "Lizard",
+    "Size": "medium"
+  },
+  "Combat": {
+    "Attack": "4-13",
+    "Defense": "2-0",
+    "Range": "0(0/0)1",
+    "Energy": "3",
+    "Movement": "6-6",
+    "Health": "6",
+    "Appraisal": "200"
+  },
+  "Abilities": [
+    {
+      "Name": "Double Strike",
+      "Type": "Active",
+      "Ability": "Once per turn during an attack, this unit may reroll it's attack dice."
+    }
+  ]
+}

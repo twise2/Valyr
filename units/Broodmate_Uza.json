@@ -1,0 +1,35 @@
+{
+  "Identity": {
+    "Name": "Broodmate Uza",
+    "Basic_Description": "A Swazlid Worker",
+    "Quote": "",
+    "Description": "",
+    "Images": [],
+    "Dynasty": "Swazlid",
+    "Type": "Champion",
+    "Class": "Soldier",
+    "Species": "Lizard",
+    "Size": "small"
+  },
+  "Combat": {
+    "Attack": "4-12",
+    "Defense": "0-1",
+    "Range": "0(0/0)9",
+    "Energy": "3",
+    "Movement": "4-4",
+    "Health": "4",
+    "Appraisal": "175"
+  },
+  "Abilities": [
+    {
+      "Name": "Ride (Broodmate)",
+      "Type": "Passive",
+      "Ability": "Whenever you move Broodmate Brak, you can move Uza adjacent (this does not count as an action for uza)"
+    },
+    {
+      "Name": "Brak (Broodmate)",
+      "Type": "Passive",
+      "Ability": "When you take a turn with Broodmate Brak, you may also take a turn with Broodmate Uza. (Both units are exhausted)"
+    }
+  ]
+}

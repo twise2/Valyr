@@ -1,0 +1,35 @@
+{
+  "Identity": {
+    "Name": "Syra, Akaedyn Shikari",
+    "Basic_Description": "Human in silver light armor with robotic arm and a large 'elepahnt' rifle slung over shoulder on the other arm",
+    "Quote": "",
+    "Description": "",
+    "Images": [],
+    "Dynasty": "Akaedour",
+    "Type": "Conscript",
+    "Class": "Assassin",
+    "Species": "Human",
+    "Size": "Medium"
+  },
+  "Combat": {
+    "Attack": "6-6",
+    "Defense": "0-1",
+    "Range": "0(0/0)1(+2/0)6(+2/+2)14",
+    "Energy": "4",
+    "Movement": "4-3",
+    "Health": "4",
+    "Appraisal": "400"
+  },
+  "Abilities": [
+    {
+      "Name": "Grappling Hook",
+      "Type": "Active",
+      "Ability": "Once per turn as an action, Syra can choose any location in line of site within 10 range and move to it."
+    },
+    {
+      "Name": "Big Game Hunter",
+      "Type": "Passive",
+      "Ability": "When attacking a target larger than medium size, Syra gains +2 skill."
+    }
+  ]
+}

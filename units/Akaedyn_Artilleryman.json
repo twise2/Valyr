@@ -1,33 +1,30 @@
 {
   "Identity": {
     "Name": "Akaedyn Artilleryman",
-    "Basic_Description": "Silver clad knights with large cannon style guns and Red Plumes",
+    "Basic_Description": "Silver clad knights with red plumes holding large two handed industrial style canons",
+    "Quote": "",
     "Description": "",
+    "Images": [],
     "Dynasty": "Akaedour",
     "Type": "Conscript",
-    "Class": "Bombadier",
+    "Class": "Gunner",
     "Species": "Human",
     "Size": "Medium"
   },
   "Combat": {
-    "Attack": "3-10",
-    "Defense": "1-1",
+    "Attack": "4-10",
+    "Defense": "0-0",
     "Range": "0(0/0)1(0/0)7",
-    "Energy": "2",
-    "Movement": "3-6",
+    "Energy": "3",
+    "Movement": "2-5",
     "Health": "3",
     "Appraisal": "100"
   },
   "Abilities": [
     {
-      "Name": "Bombard",
+      "Name": "Explosive Ammo",
       "Type": "Passive",
-      "Ability": "Attacks from this unit hit all units within 1 range of the target."
-    },
-    {
-      "Name": "Shrapnel",
-      "Type": "Passive",
-      "Ability": "Attacks from this unit can not be dodged."
+      "Ability": "Attacks by Akaedyn Artilleryman cannot be dodged and hit all units within 1 range of the target."
     }
   ]
 }

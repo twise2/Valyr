@@ -1,0 +1,35 @@
+{
+  "Identity": {
+    "Name": "Vraly, Olantan Chief",
+    "Basic_Description": "large berserker with industrial pipes sticking out of the body",
+    "Quote": "",
+    "Description": "",
+    "Images": [],
+    "Dynasty": "Olanta",
+    "Type": "Champion",
+    "Class": "Berserker",
+    "Species": "Human",
+    "Size": "large"
+  },
+  "Combat": {
+    "Attack": "5-10",
+    "Defense": "7-0",
+    "Range": "0(0/0)1",
+    "Energy": "3",
+    "Movement": "4-4",
+    "Health": "9",
+    "Appraisal": "350"
+  },
+  "Abilities": [
+    {
+      "Name": "Draw Focus",
+      "Type": "Passive",
+      "Ability": "Allied units within 2 range of Vral cannot be targetted by ranged attacks"
+    },
+    {
+      "Name": "Unrelenting",
+      "Type": "Passive",
+      "Ability": "If this unit has more damage than health, it is not defeated until the end of the round."
+    }
+  ]
+}

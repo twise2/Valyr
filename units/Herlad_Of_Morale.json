@@ -1,0 +1,40 @@
+{
+  "Identity": {
+    "Name": "Herald Of Morale",
+    "Basic_Description": "Priest in billowing robes, cloaked in a blue aura creating a wing like effect",
+    "Quote": "",
+    "Description": "",
+    "Images": [],
+    "Dynasty": "Celintra",
+    "Type": "Champion",
+    "Class": "Mage",
+    "Species": "Human",
+    "Size": "Medium"
+  },
+  "Combat": {
+    "Attack": "4-10",
+    "Defense": "0-1",
+    "Range": "0(0/0)1",
+    "Energy": "3",
+    "Movement": "2-6",
+    "Health": "3",
+    "Appraisal": "450"
+  },
+  "Abilities": [
+    {
+      "Name": "Shield",
+      "Type": "Active",
+      "Ability": "Once per turn as an action, Chose a target unit within 7 range of Herald of Celinta. Put a shield token on the unit. It gains +1 defense the next time it is attacked."
+    },
+    {
+      "Name": "Instill",
+      "Type": "Active",
+      "Ability": "Once per turn as an action, Chose a target unit within 7 range of Herald of Celinta. Put a instill token on the unit. It gains +1 strength the next time it is attacks."
+    },
+    {
+      "Name": "Summon",
+      "Type": "Active",
+      "Ability": "Once per turn, as an action Choose an allied unit anywhere on the map and roll a d20. On a roll of 10 or less move that unit adjacent to Herald of Spirit"
+    }
+  ]
+}

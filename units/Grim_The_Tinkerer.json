@@ -1,0 +1,35 @@
+{
+  "Identity": {
+    "Name": "Grim The Tinkerer",
+    "Basic_Description": "Small hunched human with a drill holding a human arm",
+    "Quote": "",
+    "Description": "",
+    "Images": [],
+    "Dynasty": "Olanta",
+    "Type": "Champion",
+    "Class": "Berserker",
+    "Species": "Human",
+    "Size": "large"
+  },
+  "Combat": {
+    "Attack": "5-10",
+    "Defense": "0-0",
+    "Range": "0(0/0)1",
+    "Energy": "2",
+    "Movement": "5-5",
+    "Health": "3",
+    "Appraisal": "350"
+  },
+  "Abilities": [
+    {
+      "Name": "Tinker",
+      "Type": "Active",
+      "Ability": "Once per turn as an action, assign one damage to Grim and one damage to an allied unit within 3 range of Grim. If you do, increase the target units health, strength, skill, sprint, sustain, or defense of by 1."
+    },
+    {
+      "Name": "Fix",
+      "Type": "Active",
+      "Ability": "Once per turn as an action, roll a d20. On a roll of 7 or below remove one damage from Grim."
+    }
+  ]
+}

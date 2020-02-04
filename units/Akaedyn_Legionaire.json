@@ -2,27 +2,29 @@
   "Identity": {
     "Name": "Akaedyn Legionnaire",
     "Basic_Description": "Silver clad knights with blue turtle shields and blue plumes equipped with long swords",
+    "Quote": "",
     "Description": "",
+    "Images": [],
     "Dynasty": "Akaedour",
     "Type": "Conscript",
-    "Class": "Knight",
+    "Class": "Soldier",
     "Species": "Human",
     "Size": "Medium"
   },
   "Combat": {
-    "Attack": "3-13",
-    "Defense": "3-2",
+    "Attack": "4-13",
+    "Defense": "3-0",
     "Range": "0(0/0)1",
-    "Energy": "2",
-    "Movement": "5-5",
-    "Health": "4",
+    "Energy": "3",
+    "Movement": "4-4",
+    "Health": "3",
     "Appraisal": "75"
   },
   "Abilities": [
     {
-      "Name" : "Legion Wall",
+      "Name": "Legion Wall",
       "Type": "Passive",
-      "Ability": "Each unit within 1 range of Akaedyn Legionnaire Gain +1 Block."
+      "Ability": "Each other Akaedour Soldier adjacent to Akaedyn Legionnaire gains +1 Block."
     }
   ]
 }

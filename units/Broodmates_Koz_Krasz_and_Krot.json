@@ -1,0 +1,36 @@
+{
+  "Identity": {
+    "Name": "Broodmates Koz Krasz and Krot",
+    "Basic_Description": "A Swazlid Worker",
+    "Quote": "",
+    "Description": "",
+    "Images": [],
+    "Dynasty": "Swazlid",
+    "Type": "Champion",
+    "Class": "Soldier",
+    "Species": "Lizard",
+    "Size": "small"
+  },
+  "Combat": {
+    "Attack": "4-12",
+    "Defense": "0-1",
+    "Range": "0(0/0)9",
+    "Energy": "3",
+    "Movement": "4-4",
+    "Health": "4",
+    "Appraisal": "250"
+  },
+  "Abilities": [
+    {
+      "Name": "Broodmate Swarm",
+      "Type": "Passive",
+      "Ability": "When you place Broodmates Koz Krasz and Krot, place down two marked swazlid swarm tokens.",
+      "Token": "Swazlid Swarm"
+    },
+    {
+      "Name": "Vision (Broodmate)",
+      "Type": "Passive",
+      "Ability": "When calculating line of site, Broodmates Koz Krasz and Krot can use the line of site of either of it's marked Swazlid Swarm tokens."
+    }
+  ]
+}

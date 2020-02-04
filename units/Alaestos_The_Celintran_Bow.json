@@ -1,0 +1,40 @@
+{
+  "Identity": {
+    "Name": "Alaestos, The Celintran Bow",
+    "Basic_Description": "Archer in robes clad in blue with golden 'aura' bow and other blue and gold auras along skin",
+    "Quote": "",
+    "Description": "",
+    "Images": [],
+    "Dynasty": "Celintra",
+    "Type": "Champion",
+    "Class": "Archer",
+    "Species": "Human",
+    "Size": "Medium"
+  },
+  "Combat": {
+    "Attack": "4-10",
+    "Defense": "0-1",
+    "Range": "0(-2/-3)1(-1/0)8(+1/0)16",
+    "Energy": "3",
+    "Movement": "5-5",
+    "Health": "3",
+    "Appraisal": "450"
+  },
+  "Abilities": [
+    {
+      "Name": "Lob",
+      "Type": "Passive",
+      "Ability": "When calculating line of site, Archers of Celintra can pivot their straight line one time vertically."
+    },
+    {
+      "Name": "Phase",
+      "Type": "Passive",
+      "Ability": "When sprinting, Archers of Celintra can move through solid objects if their sprint would end on a valid location."
+    },
+    {
+      "Name": "Phased Arrow",
+      "Type": "Active",
+      "Ability": "Once per turn as an action, Alaestos's next attack can target units without line of site."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "Identity": {
+    "Name": "Tycho Scion of Akaedour",
+    "Basic_Description": "Silver clad knights no helmet",
+    "Quote": "",
+    "Description": "",
+    "Images": [],
+    "Dynasty": "Akaedour",
+    "Type": "Champion",
+    "Class": "Soldier",
+    "Species": "Human",
+    "Size": "Medium"
+  },
+  "Combat": {
+    "Attack": "4-13",
+    "Defense": "3-0",
+    "Range": "0(0/0)1",
+    "Energy": "3",
+    "Movement": "6-4",
+    "Health": "5",
+    "Appraisal": "300"
+  },
+  "Abilities": [
+    {
+      "Name": "Frontline Commander",
+      "Type": "Passive",
+      "Ability": "Each other Akaedour Soldier within 3 range of Tycho gains +1 strength."
+    },
+    {
+      "Name": "Inspiring Charge",
+      "Type": "Passive",
+      "Ability": "If an opponent is adjacent to Tycho, any Akaedour unit moving directly towards Tycho gains +3 sprint."
+    }
+  ]
+}

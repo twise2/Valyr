@@ -1,0 +1,30 @@
+{
+  "Identity": {
+    "Name": "Swazlid Workers",
+    "Basic_Description": "small humanoid like lizard people (like kobolds) with spiked boomerangs",
+    "Quote": "",
+    "Description": "",
+    "Images": [],
+    "Dynasty": "Swazlid",
+    "Type": "Conscript",
+    "Class": "Soldier",
+    "Species": "Lizard",
+    "Size": "small"
+  },
+  "Combat": {
+    "Attack": "4-11",
+    "Defense": "0-1",
+    "Range": "0(0/0)9",
+    "Energy": "2",
+    "Movement": "4-4",
+    "Health": "4",
+    "Appraisal": "125"
+  },
+  "Abilities": [
+    {
+      "Name": "Scurry",
+      "Type": "Active",
+      "Ability": "Once per turn after attacking, Swazlid Workers may perform one free move actions (this action still follows the usual sprint/sustain rules)."
+    }
+  ]
+}

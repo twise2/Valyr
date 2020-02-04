@@ -1,0 +1,36 @@
+{
+  "Identity": {
+    "Name": "Inferno Mage Isidorus",
+    "Basic_Description": "wizard cloacked in dark gray with red trim and a brown walking staff with red gemstone in the top",
+    "Quote": "",
+    "Description": "",
+    "Images": [],
+    "Dynasty": "Akaedour",
+    "Type": "Champion",
+    "Class": "Mage",
+    "Species": "Human",
+    "Size": "Medium"
+  },
+  "Combat": {
+    "Attack": "3-10",
+    "Defense": "0-0",
+    "Range": "0(0/0)1",
+    "Energy": "3",
+    "Movement": "4-4",
+    "Health": "5",
+    "Appraisal": "350"
+  },
+  "Abilities": [
+    {
+      "Name": "Immolate",
+      "Type": "Active",
+      "Ability": "Once per turn as an action, choose a target in line of site within 10 range of Isidorus. Roll 3 d20s. On each roll of a 10 or less, deal 1 damage to the target."
+    },
+    {
+      "Name": "Hot Spot",
+      "Type": "Active",
+      "Ability": "Choose a unit within 10 range of Isidorus. That unit must move a distance greater than or equal to it's sprint value on it's next turn. (Put a fortune token on that unit to mark it as having to move)",
+      "Template": "Fortune Token"
+    }
+  ]
+}

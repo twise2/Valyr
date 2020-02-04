@@ -1,0 +1,24 @@
+{
+  "Identity": {
+    "Name": "Levy Axethrower",
+    "Basic_Description": "light mad max style skirmishers with axes",
+    "Quote": "",
+    "Description": "",
+    "Images": [],
+    "Dynasty": "Olanta",
+    "Type": "Conscript",
+    "Class": "Berserker",
+    "Species": "Human",
+    "Size": "Medium"
+  },
+  "Combat": {
+    "Attack": "3-10",
+    "Defense": "0-0",
+    "Range": "0(0/0)7",
+    "Energy": "3",
+    "Movement": "5-5",
+    "Health": "2",
+    "Appraisal": "30"
+  },
+  "Abilities": []
+}

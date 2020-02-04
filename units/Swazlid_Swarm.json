@@ -1,0 +1,30 @@
+{
+  "Identity": {
+    "Name": "Swazlid Swarm",
+    "Basic_Description": "assorted small lizards ranging from 6 inches to 3 feet in size",
+    "Quote": "",
+    "Description": "",
+    "Images": [],
+    "Dynasty": "Swazlid",
+    "Type": "Conscript",
+    "Class": "Soldier",
+    "Species": "Lizard",
+    "Size": "token"
+  },
+  "Combat": {
+    "Attack": "1-1",
+    "Defense": "0-0",
+    "Range": "0(0/0)1",
+    "Energy": "3",
+    "Movement": "6-6",
+    "Health": "1",
+    "Appraisal": "50"
+  },
+  "Abilities": [
+    {
+      "Name": "Swarm",
+      "Type": "Passive",
+      "Ability": "All Swarzlid Swarm tokens take their turn at the same time. When multiple Swazlid Swarm attack the same unit combine their attack and skill into a single attack. (If 3 Swazlid Swarm attack a unit, they attack as one unit with 3-3 attack."
+    }
+  ]
+}

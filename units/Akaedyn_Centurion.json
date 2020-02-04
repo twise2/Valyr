@@ -1,0 +1,35 @@
+{
+  "Identity": {
+    "Name": "Akaedyn Centurion",
+    "Basic_Description": "Large Bidpedal machines (kinda like skyrim centurions) with two large swords made of silve metal.",
+    "Quote": "",
+    "Description": "",
+    "Images": [],
+    "Dynasty": "Akaedour",
+    "Type": "Conscript",
+    "Class": "Soldier",
+    "Species": "Automaton",
+    "Size": "Large"
+  },
+  "Combat": {
+    "Attack": "8-8",
+    "Defense": "5-0",
+    "Range": "0(0/0)1",
+    "Energy": "3",
+    "Movement": "4-4",
+    "Health": "7",
+    "Appraisal": "200"
+  },
+  "Abilities": [
+    {
+      "Name": "Overwhelming Presence",
+      "Type": "Passive",
+      "Ability": "Enemy units adjacent to Akaedyn Centurion must target Akedyn Centurion when performing an attack."
+    },
+    {
+      "Name": "Double Strike",
+      "Type": "Active",
+      "Ability": "Once per turn during an attack, Akaedyn Centurion may re-roll any number of attack dice."
+    }
+  ]
+}

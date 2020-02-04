@@ -1,0 +1,35 @@
+{
+  "Identity": {
+    "Name": "Archer of Celintra",
+    "Basic_Description": "Archers clad in robes with blue 'aura' bows",
+    "Quote": "",
+    "Description": "",
+    "Images": [],
+    "Dynasty": "Celintra",
+    "Type": "Conscript",
+    "Class": "Archer",
+    "Species": "Human",
+    "Size": "Medium"
+  },
+  "Combat": {
+    "Attack": "4-10",
+    "Defense": "0-0",
+    "Range": "0(-2/-3)1(-1/0)8(0/0)16",
+    "Energy": "3",
+    "Movement": "3-5",
+    "Health": "3",
+    "Appraisal": "150"
+  },
+  "Abilities": [
+    {
+      "Name": "Lob",
+      "Type": "Passive",
+      "Ability": "When calculating line of site, Archers of Celintra can pivot their straight line one time vertically."
+    },
+    {
+      "Name": "Phase",
+      "Type": "Passive",
+      "Ability": "When sprinting, Archers of Celintra can move through solid objects if their sprint would end on a valid location."
+    }
+  ]
+}

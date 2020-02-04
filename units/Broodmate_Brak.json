@@ -1,0 +1,35 @@
+{
+  "Identity": {
+    "Name": "Broodmate Brak",
+    "Basic_Description": "A Swazlid Brute",
+    "Quote": "",
+    "Description": "",
+    "Images": [],
+    "Dynasty": "Swazlid",
+    "Type": "Champion",
+    "Class": "Soldier",
+    "Species": "Lizard",
+    "Size": "large"
+  },
+  "Combat": {
+    "Attack": "4-14",
+    "Defense": "3-0",
+    "Range": "0(0/0)1",
+    "Energy": "3",
+    "Movement": "6-6",
+    "Health": "6",
+    "Appraisal": "275"
+  },
+  "Abilities": [
+    {
+      "Name": "Double Strike",
+      "Type": "Active",
+      "Ability": "Once per turn during an attack, this unit may reroll it's attack dice."
+    },
+    {
+      "Name": "Uza (Broodmate)",
+      "Type": "Passive",
+      "Ability": "When you take a turn with Broodmate Uza, you may also take a turn with Broodmate Brak. (Both units are exhausted)"
+    }
+  ]
+}

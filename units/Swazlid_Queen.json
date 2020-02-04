@@ -1,0 +1,40 @@
+{
+  "Identity": {
+    "Name": "Swazlid Queen",
+    "Basic_Description": "A Large lizard queen ant with a massive thorax",
+    "Quote": "",
+    "Description": "",
+    "Images": [],
+    "Dynasty": "Swazlid",
+    "Type": "Champion",
+    "Class": "Hive",
+    "Species": "Lizard",
+    "Size": "colassal"
+  },
+  "Combat": {
+    "Attack": "0-0",
+    "Defense": "0-0",
+    "Range": "0(0/0)0",
+    "Energy": "1",
+    "Movement": "0-0",
+    "Health": "9",
+    "Appraisal": "500"
+  },
+  "Abilities": [
+    {
+      "Name": "Spawn Swarm",
+      "Type": "Passive",
+      "Ability": "Once per turn as an action, roll a d20. on a roll of 10 or less create a swazlid swarm unit."
+    },
+    {
+      "Name": "Spawn Worker",
+      "Type": "Passive",
+      "Ability": "Once per turn as an action, roll a d20. on a roll of 4 or less create a swazlid swarm unit."
+    },
+    {
+      "Name": "Spawn Brute",
+      "Type": "Passive",
+      "Ability": "Once per turn as an action, roll a d20. on a roll of 1 create a swazlid swarm unit."
+    }
+  ]
+}

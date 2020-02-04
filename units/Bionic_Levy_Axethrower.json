@@ -1,0 +1,30 @@
+{
+  "Identity": {
+    "Name": "Levy Bionic",
+    "Basic_Description": "light mad max style skirmishers with axes and metal 'pain' style body mods",
+    "Quote": "",
+    "Description": "",
+    "Images": [],
+    "Dynasty": "Olanta",
+    "Type": "Conscript",
+    "Class": "Berserker",
+    "Species": "Human",
+    "Size": "Medium"
+  },
+  "Combat": {
+    "Attack": "3-10",
+    "Defense": "0-0",
+    "Range": "0(0/0)7",
+    "Energy": "3",
+    "Movement": "5-5",
+    "Health": "2",
+    "Appraisal": "70"
+  },
+  "Abilities": [
+    {
+      "Name": "Bionic Mutation",
+      "Type": "Passive",
+      "Ability": "If Levy Bionic has taken damage, it gains +3 strength and +7 max range."
+    }
+  ]
+}

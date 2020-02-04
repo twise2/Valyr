@@ -1,0 +1,30 @@
+{
+  "Identity": {
+    "Name": "Celintran Inquisidor",
+    "Basic_Description": "lightly armed knights with just a sword and glowing blue 'aura' on their feet",
+    "Quote": "",
+    "Description": "",
+    "Images": [],
+    "Dynasty": "Celintra",
+    "Type": "Conscript",
+    "Class": "Knight",
+    "Species": "Human",
+    "Size": "Medium"
+  },
+  "Combat": {
+    "Attack": "4-14",
+    "Defense": "0-0",
+    "Range": "0(0/0)1",
+    "Energy": "3",
+    "Movement": "5-5",
+    "Health": "5",
+    "Appraisal": "150"
+  },
+  "Abilities": [
+    {
+      "Name": "Flying",
+      "Type": "Passive",
+      "Ability": "Celintran Inquisidors can move vertically as if it had no height."
+    }
+  ]
+}

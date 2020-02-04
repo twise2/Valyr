@@ -1,0 +1,30 @@
+{
+  "Identity": {
+    "Name": "Celintran Temple Guard",
+    "Basic_Description": "lightly armed knights with a sword on their hip and a glowing blue 'aura' spear in their hands",
+    "Quote": "",
+    "Description": "",
+    "Images": [],
+    "Dynasty": "Celintra",
+    "Type": "Conscript",
+    "Class": "Knight",
+    "Species": "Human",
+    "Size": "Medium"
+  },
+  "Combat": {
+    "Attack": "5-13",
+    "Defense": "0-0",
+    "Range": "0(0/0)1",
+    "Energy": "3",
+    "Movement": "5-5",
+    "Health": "5",
+    "Appraisal": "150"
+  },
+  "Abilities": [
+    {
+      "Name": "Aura Javelin",
+      "Type": "Active",
+      "Ability": "Once pergame as an action, Celintran Temple Guard can perform an attackwith up to 7 range. If that attack deal damage, Celintran Temple Guard may move directly adjacent to the targeted unit."
+    }
+  ]
+}
