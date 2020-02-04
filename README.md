@@ -89,7 +89,7 @@ Alaestos will calculate a strength value of 4 (4-0) and skill value of 13 (13-0)
 
 ![Screenshot](Images/attack-modified.png)
 
-The target has block 3 and dodge 1.
+Lets say the target also has block 3 and dodge 1.
 
 ![Screenshot](Images/defense-only.png)
 
