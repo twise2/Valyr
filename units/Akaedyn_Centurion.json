@@ -9,7 +9,7 @@
     "Type": "Conscript",
     "Class": "Soldier",
     "Species": "Automaton",
-    "Size": "Large"
+    "Size": "large"
   },
   "Combat": {
     "Attack": "8-8",
