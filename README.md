@@ -13,7 +13,7 @@ At the beginning of the game each player will create or come with an "army" cons
 
 ![Screenshot](Images/appraisal.png)
 
-## Starting the Game
+# Starting the Game
 
 The player with the lowest appraisal value takes the priority token. In the event of a tie, the youngest player starts with the priority token.
 
@@ -21,13 +21,13 @@ The player with the lowest appraisal value takes the priority token. In the even
 
 Starting with the player with the priority token, each player will take their unit cards and place them adjacent to each other on an edge of the battlefield. Then each subsequent player to the left will place their unit cards onto the battlefield. These cards denote a teams "starting location". Then in the same order, each player will place their units within 3 range of their starting location.
 
-### Starting The Game
+# Rounds
 
 The first "round" of the game begins with the player with the priority token. This player will take a "turn" by choosing a unit and turning that unit card sideways denoting the unit as "exhausted". After each "turn", the player to the left takes a "turn". If all units are "exhausted" at the beginning of a turn, that turn is skipped.
 
 ![Screenshot](Images/exhaust.png)
 
-### Taking A Turn
+# Taking A Turn
 
 When a turn begins, a player may take a number of actions less than or equal to the amount of energy the unit they chose that turn has:
 
@@ -41,9 +41,9 @@ There are three types of actions a unit can take
 
 After a player has completed their units actions for a turn, the turn is passed and the player to their left takes a turn.
 
-### Actions
+## Actions
 
-#### Move Action
+### Move Action
 If the move action is chosen, the player will look at their unit's movement stat (marked by the winged boots icon) pick up their unit and place it back down within it's movement range.
 
 ![Screenshot](Images/movement.png)
@@ -52,7 +52,7 @@ The movement stat has two numbers -- a sprint value and a sustain value (marked 
 
 Movement actions must end on a location where the unit can stand of it's own, without support. If a precariously placed unit's model falls due to an edge or incline, it is concerned "fallen". A fallen unit is left where it lands, must use it's next action to "stand up," it's block and dodge values are both set to zero, and it's passive abilities do not take effect.
 
-#### Attack Action
+### Attack Action
 You may also choose to attack another unit. In order to perform an attack action, choose a unit who is a distance from your unit between your minimum range and maximum range.
 
 ![Screenshot](Images/min-max-range.png)
@@ -107,7 +107,7 @@ The defender will then negate up to their dodge value on target attacks.
 
 The defender takes 1 damage and the attack ends.
 
-#### Ability Action
+### Ability Action
 
 A unit can have two types of abilites passive and active.
 
@@ -124,10 +124,10 @@ As an an action, a unit can use an active ability described on their card, doing
 ### Defeating a Unit
 If a unit ever has more damage then health, that unit is instantly considered defeated. All active abilities and effects from the the unit are negated, the unit's model is removed from the board, it's considered exhausted for the remainder of the game, and it is not able to take turns.
 
-### Ending a Round
+## Ending a Round
 The round ends when all units for every player are "exhausted". The priority token is then passed to the right, all units are "energized" (no longer exhausted) and a new round begins.
 
-### End of Game
+## End of Game
 If at any time all players except one have had all their units defeated or concede, the game ends and the last player standing wins.
 
 
