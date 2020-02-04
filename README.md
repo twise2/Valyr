@@ -83,21 +83,25 @@ If a unit has more damage than health at the end of an attack, it is considered 
 
 Combat Example:
 
-If Alaestos is attacking a target at range 9.
+If Alaestos is attacking a target at range 1.
 
-Alaestor will calculate a strength value of 4 and skill value of 13 based on his range modifiers.
+Alaestos will calculate a strength value of 4 (4-0) and skill value of 13 (13-0) based on his range modifiers. NOTE: if Alaestos was attacking at range 1 he would have strength 3 (4-1) and skill 10 (13-3).
+
+![Screenshot](Images/attack-modified.png)
 
 The target has block 3 and dodge 1.
 
-Alaestos rolls 4 dice, rolling a 7,10, 12, and 15.
+![Screenshot](Images/defense-only.png)
+
+Alaestos rolls 4 dice (4 calculated strength), rolling a 7,10, 12, and 15.
 
 ![Screenshot](Images/rolls.png)
 
-Alaestos scores 2 "on target attacks" 7 and 10 (13 skill - 3 block >= dice value)
+Alaestos scores 2 "on target attacks" from the 7 and 10 (13 skill - 3 block >= dice value)
 
 ![Screenshot](Images/rolls-on-target.png)
 
-The defender will then negate 1 of those attacks using their dodge value.
+The defender will then negate up to their dodge value on target attacks.
 
 ![Screenshot](Images/rolls-dodge.png)
 
