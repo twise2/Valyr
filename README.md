@@ -37,7 +37,7 @@ There are three types of actions a unit can take
 
 1. ["Move"](#move-action)
 2. ["Attack"](#attack-action)
-3. ["Use an Ability"](ability-action)
+3. ["Use an Ability"](#ability-action)
 
 After a player has completed their units actions for a turn, the turn is passed and the player to their left takes a turn.
 
