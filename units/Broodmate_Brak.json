@@ -9,7 +9,7 @@
     "Type": "Champion",
     "Class": "Soldier",
     "Species": "Lizard",
-    "Size": "large"
+    "Size": "Large"
   },
   "Combat": {
     "Attack": "4-14",
