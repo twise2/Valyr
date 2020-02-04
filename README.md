@@ -1,5 +1,5 @@
 # Valyr
-Valyr is a 2+ Player Game revolving around making an army of units and having them battle it out anywhere (on your tabletop). The game revolves around a “True Movement” system that uses actual distance measuring to move characters in your game to defeat your opponents.
+Valyr is a 2+ Player Game revolving around making an army of units and having them battle it out anywhere (on your tabletop). The game revolves around a “True Movement” system that uses actual distance measuring to move units in your game to defeat your opponents.
 
 # Getting Started
 
@@ -19,7 +19,7 @@ The player with the lowest appraisal value takes the priority token. In the even
 
 ## Setup
 
-Starting with the player with the priority token, each player will take their unit cards and place adjacent to each other on an edge of the battlefield. Then each subsequent player to the left will place their unit cards onto the battlefield  These cards denote a teams "starting location". Then in the same order, each player will place their units within 3 range of their starting location.
+Starting with the player with the priority token, each player will take their unit cards and place them adjacent to each other on an edge of the battlefield. Then each subsequent player to the left will place their unit cards onto the battlefield. These cards denote a teams "starting location". Then in the same order, each player will place their units within 3 range of their starting location.
 
 ### Starting The Game
 
@@ -39,53 +39,88 @@ There are three types of actions a unit can take
 2. "Attack"
 3. "Use an Ability"
 
-After a player has completed their units actions for a turn, the turn is passed.
+After a player has completed their units actions for a turn, the turn is passed and the player to their left takes a turn.
 
-#### Actions
+### Actions
 
-1. **Move**<br/>
-If the move action is chosen, the player will lack at their units movement stat, marked by the winged boots icon.
-
-The movement stat has two numbers -- a sprint value and a sustain value marked as spint-sustain. The first time you move on a turn, a unit can move a distance up to its sprint value. Each subsequent movement a unit can move up to its sustain value. Each movement consumes one energy.
+#### Move Actions
+If the move action is chosen, the player will look at their unit's movement stat (marked by the winged boots icon) pick up their unit and place it back down within it's movement range.
 
 ![Screenshot](Images/movement.png)
 
+The movement stat has two numbers -- a sprint value and a sustain value (marked as spint-sustain). The first time a unit moves on a turn, it can move a distance up to its sprint value. Each subsequent movement a unit makes that turn can move up to its sustain value. Each movement consumes one energy.
 
-2. **Attack**<br/>
-You may also choose to attack another unit. In order to perform an attack action, choose a unit who is a distance between you minimum range and maximum range.
+Movement actions must end on a location where the unit can stand of it's own, without support. If a precariously placed unit's model falls due to an edge or incline, it is concerned "fallen". A fallen unit is left where it lands, must use it's next action to "stand up," it's block and dodge values are both set to zero, and it's passive abilities do not take effect.
+
+#### Attack Action
+You may also choose to attack another unit. In order to perform an attack action, choose a unit who is a distance from your unit between your minimum range and maximum range.
 
 ![Screenshot](Images/min-max-range.png)
 
-After choosing a unit, look at your character attack skills - Denoted by the crossed sword icon. The first number is the strength value of your unit, the second number is the skill value of you unit.
+After choosing a unit, look at your units attack skills (Denoted by the crossed sword icon). The first number is the strength value of your unit, the second number is the skill value of you unit (Denoted as strength-skill).
 
 ![Screenshot](Images/attack.png)
 
-Next you will look a the range modifier value for the range of the attack you are performing. For example, if Alaestoes's base is 1 range away from the targets, Alaestos will have a range modifier of -1/-3 because the range is between 0 and 3. If Alaestoes's base is 6 range away from the opponents Alaestor will have no range modifier because it is between 3 and 16.
+Next you will look a the range modifier value for the attack you are performing. As an example, if Alaestoes's base is 1 range away from the target's; Alaestos will have a range modifier of -1/-3 because the range is between 0 and 3. If Alaestoes's base is 6 range away from the target's Alaestor will have no range modifier because the range is between 3 and 16.
 
 ![Screenshot](Images/range-modifier.png)
 
-You will then modify your units strength and skill value by the numbers found in your range modifier. At range 1, Alaestoes would have a strength value of 3 and a skill value of 10 for the attack. At range 6, Alaestoes would have a strength value of 4 and a skill value of 13.
+You will then modify your units strength and skill value by the numbers found in your range modifier. At range 1, Alaestoes would have a calculated strength value of 3 and skill value of 10 for the attack. At range 6, Alaestoes would have a calculated strength value of 4 and skill value of 13.
 
 The attacking unit will roll a number of d20s equivalent to their caluclated strength value.
 
-Next look at your opponents defense value. Denoted by the shield icon. The first number denotes a units block value and the second number denotes a units dodge value.
+Then the attacker will look at the target unit's defense values (Denoted by the shield icon). The first number denotes a units block value and the second number denotes a units dodge value (Denoted as block-dodge).
 
 ![Screenshot](Images/defense.png)
 
-For each d20 rolled, if the value rolled is less than or equal to the attackers calculated skill value minus the defenders block value, add one "on target attack". The defender can then remove a number of "on target attacks" less than or euqal to it's dodge value. This final number is the number of "hits" a unit takes when attacked Hits are then assigned as damage to the target unit.
+For each d20 rolled, if the value rolled is less than or equal to the attackers calculated skill value minus the defenders block value it counts as an "on target attack". 
 
-For example if Alaestos is attacking with strength 4 and skill 13 and the target has block 3 and dodge 1. Alaestos will roll 4 dice. On each roll of a 10 or less (skill-block), Alaestos will calculate one "on target attack". So if Alaestos rolls a 9, 3, 15, 12 Alaestos will have 2 "on target attacks." The defender can then choose dodge 1 of those "on target attacks" and will take a total of 1 damage.
+After calculating the number of "on target attacks", the defender can negate a number of them less than or equal to their dodge value. 
 
-If at any time the amount of damage on a unit is greater than that units health, that unit is considered "defeated." The units model is returned to the starting area, you can no longer take turns with that unit, and the unit is considered "exhausted" for the rest of the game.
+The number of non-negated attacks are then assigned as "damage" to the defending unit.
 
-3. **Use an Active Ability** <br/>
-A unit can take one action to use an ability described on the card. Active abilities go away if the unit is removed play. Abilites can override base rules. When text of an active ability conflicts with any other ability in play, follow the text of the most recently activated ability.
+If a unit has more damage than health at the end of an attack, it is considered defeated.
 
-### End of Round
+Combat Example: 
+
+If Alaestos is attacking a target at range 9.
+
+Alaestor will calculate a strength value of 4 and skill value of 13 based on his range modifiers.
+
+The target has block 3 and dodge 1. 
+
+Alaestos rolls 4 dice, rolling a 7,10, 12, and 15. 
+
+Alaestos scores 2 "on target attacks" 7 and 10 (13 skill - 3 block >= dice value)
+
+The defender will then negate 1 of those attacks using their dodge value.
+
+The defender takes 1 damage and the attack ends.
+
+#### Ability Action
+
+A unit can have two types of abilites passive and active. 
+
+A passive abity is not an action. it is an effect that modifies the state of the board.
+
+As an an action, a unit can use an active ability described on their card, doing what is described in the ability's text.
+
+```
+  Active abilities go away if the unit is removed play. 
+  Abilites can override base rules. 
+  When text of an active ability conflicts with another ability in play, the more recently activated ability gets precedence.
+```
+
+### Defeating a Unit
+If a unit ever has more damage then health, that unit is instantly considered defeated. All active abilities and effects from the the unit are negated, the unit's model is removed from the board, it's considered exhausted for the remainder of the game, and it is not able to take turns.
+
+### Ending a Round
 The round ends when all units for every player are "exhausted". The priority token is then passed to the right, all units are "energized" (no longer exhausted) and a new round begins.
 
 ### End of Game
-If at any time all players except one have been defeated or concede, the game ends and the last player standing wins.
+If at any time all players except one have had all their units defeated or concede, the game ends and the last player standing wins.
+
+
 
 # Unit Basics
 In this game you will construct armies consisting of Units. Units will consists of stats which are contained in the Unit folder:
@@ -98,8 +133,8 @@ Identity: {
   Basic_Description: Basic Description of what the unit looks like.
   Description: Full description of what the unit is in lore.
   Dynasty: The faction the unit belongs to.
-  Type: The character type of the unit. (Champion or Conscript) Champions can only be one ofs in an army, conscripts can be as many as you want.
-  Class: The class of character type
+  Type: The type of the unit. (Champion or Conscript) Champions can only be one ofs in an army, conscripts can be as many as you want.
+  Class: The class of the unit
   Species: The units species.
   Distinctions: Distinct Traits the unit has.
   Size: Size of the unit.
@@ -115,7 +150,7 @@ Combat: {
   Range: (min-range-[strength modifier/skill modifier]-range[strength modifier/skill modifier]-max-range) The Range this unit can attack at and the change in their strength/skill at each range
   Energy: The amount of actions this unit can take on a turn.
   Movement: (Sprint-Stamina) How far this unit can move on it's first move of the turn (Sprint) and each subsequent move in the same turn (Stamina)
-  Health: How much "distress" a unit can take before being defeated.
+  Health: How much "damage" a unit can take before being defeated.
   Appraisal: How expensive this unit is to add to your army.
 }
 ```
@@ -135,12 +170,12 @@ Abilites: {
 ### Some Units also need extra components listed under components
 
 ```
-Components: Extra components needed for this character
+Components: Extra components needed for this unit.
 ```
 
 # Game Play Tenants
 The core of this game is to allow creative flexibility and allow for quick wargame elements in any location. Much like collectible card games, design decisions should revolve around:
-  1. Creativity. Restrictions breed creativity, but the meta should not revolve around specific elements. Location changes should make most character playable situationally.
+  1. Creativity. Restrictions breed creativity, but the meta should not revolve around specific elements. Location changes should make most units playable situationally.
   2. Game Speed. Gameplay should not be overly restricted or drag on. Scenarios should encourage quicker gameplay that does not drag out, especially in multiplayer scenarios.
   3. Tension Points. The game should lead to points where a good maneuver or role can swing the tide of the game. Clever Play - Luring opponents into a trap or executing a plan should be rewarded.
   4. Reward Flashy Plays. The game should encourage people to take actions, whatever they may be. Passive or auto play units and teams should be discouraged. General flexible plans should be neccessary.
