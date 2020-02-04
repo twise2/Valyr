@@ -73,41 +73,47 @@ Then the attacker will look at the target unit's defense values (Denoted by the 
 
 ![Screenshot](Images/defense.png)
 
-For each d20 rolled, if the value rolled is less than or equal to the attackers calculated skill value minus the defenders block value it counts as an "on target attack". 
+For each d20 rolled, if the value rolled is less than or equal to the attackers calculated skill value minus the defenders block value it counts as an "on target attack".
 
-After calculating the number of "on target attacks", the defender can negate a number of them less than or equal to their dodge value. 
+After calculating the number of "on target attacks", the defender can negate a number of them less than or equal to their dodge value.
 
 The number of non-negated attacks are then assigned as "damage" to the defending unit.
 
 If a unit has more damage than health at the end of an attack, it is considered defeated.
 
-Combat Example: 
+Combat Example:
 
 If Alaestos is attacking a target at range 9.
 
 Alaestor will calculate a strength value of 4 and skill value of 13 based on his range modifiers.
 
-The target has block 3 and dodge 1. 
+The target has block 3 and dodge 1.
 
-Alaestos rolls 4 dice, rolling a 7,10, 12, and 15. 
+Alaestos rolls 4 dice, rolling a 7,10, 12, and 15.
+
+![Screenshot](Images/rolls.png)
 
 Alaestos scores 2 "on target attacks" 7 and 10 (13 skill - 3 block >= dice value)
 
+![Screenshot](Images/rolls-on-target.png)
+
 The defender will then negate 1 of those attacks using their dodge value.
+
+![Screenshot](Images/rolls-dodge.png)
 
 The defender takes 1 damage and the attack ends.
 
 #### Ability Action
 
-A unit can have two types of abilites passive and active. 
+A unit can have two types of abilites passive and active.
 
 A passive ability is not an action. it is an effect that modifies the state of the board.
 
 As an an action, a unit can use an active ability described on their card, doing what is described in the ability's text.
 
 ```
-  Active abilities go away if the unit is removed play. 
-  Abilites can override base rules. 
+  Active abilities go away if the unit is removed play.
+  Abilites can override base rules.
   When text of an active ability conflicts with another ability in play, the more recently activated ability gets precedence.
 ```
 
