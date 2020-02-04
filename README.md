@@ -81,7 +81,7 @@ The number of non-negated attacks are then assigned as "damage" to the defending
 
 If a unit has more damage than health at the end of an attack, it is considered defeated.
 
-Combat Example:
+#### Combat Example
 
 If Alaestos is attacking a target at range 1.
 
