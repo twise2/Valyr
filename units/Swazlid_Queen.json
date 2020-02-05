@@ -14,11 +14,11 @@
   "Combat": {
     "Attack": "0-0",
     "Defense": "0-0",
-    "Range": "0(0/0)0",
+    "Range": "0(0/0)1",
     "Energy": "1",
     "Movement": "0-0",
     "Health": "9",
-    "Appraisal": "500"
+    "Appraisal": "650"
   },
   "Abilities": [
     {
