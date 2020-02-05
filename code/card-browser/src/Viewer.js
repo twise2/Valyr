@@ -98,8 +98,8 @@ class Viewer extends Component {
             <div className="Search">
               <div className="SearchBarText">Choose the filter type</div>
               {this.SearchTypeSelect()}
-              <div className="SearchBarText">Choose a value to Filter By</div>
-              {this.SearchTypeFilter(this.state.searchType)}
+              {this.state.searchType.length ? <div className="SearchBarText">Choose a value to Filter By</div> : null}
+              {this.state.searchType.length ? this.SearchTypeFilter(this.state.searchType) : null}
             </div>
             <div className="ResetButton" onClick={() => this.resetSearch()}>
               Reset Filters

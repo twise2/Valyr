@@ -1,6 +1,6 @@
 {
   "Identity": {
-    "Name": "Broodmates Koz Krasz and Krot",
+    "Name": "Swazlid Broodmates",
     "Basic_Description": "A Swazlid Worker",
     "Quote": "",
     "Description": "",
@@ -24,13 +24,13 @@
     {
       "Name": "Broodmate Swarm",
       "Type": "Passive",
-      "Ability": "When you place Broodmates Koz Krasz and Krot, place down two marked swazlid swarm tokens.",
+      "Ability": "When you put Swazlid Broodmates in play, place down two marked swazlid swarm tokens.",
       "Token": "Swazlid Swarm"
     },
     {
       "Name": "Vision (Broodmate)",
       "Type": "Passive",
-      "Ability": "When calculating line of site, Broodmates Koz Krasz and Krot can use the line of site of either of it's marked Swazlid Swarm tokens."
+      "Ability": "When calculating line of site, Swazlid Broodmates can use the line of site of either of it's marked Swazlid Swarm tokens."
     }
   ]
 }
