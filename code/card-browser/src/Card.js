@@ -58,7 +58,7 @@ class Card extends Component {
     else {
       return {
         background:
-          'linear-gradient(to right bottom, rgb(34,139,34, .4), rgba(255, 255, 255, 0))',
+          'linear-gradient(to right top, rgb(34,139,34, .4), rgba(130, 130, 130, .5))',
       };
     }
   }
