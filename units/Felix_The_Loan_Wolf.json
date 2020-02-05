@@ -1,0 +1,35 @@
+{
+  "Identity": {
+    "Name": "Felix, The Loan Wolf",
+    "Basic_Description": "Cowboy style character with pancho over an arm replaced from the elbow down with a canon of some sort and a gun at his other hip.",
+    "Quote": "",
+    "Description": "",
+    "Images": [],
+    "Dynasty": "Neutral",
+    "Type": "Champion",
+    "Class": "Marksmen",
+    "Species": "Human",
+    "Size": "Medium"
+  },
+  "Combat": {
+    "Attack": "4-12",
+    "Defense": "0-1",
+    "Range": "0(-3/-3)1(-1/-2)4(0/0)10",
+    "Energy": "4",
+    "Movement": "3-3",
+    "Health": "6",
+    "Appraisal": "350"
+  },
+  "Abilities": [
+    {
+      "Name": "Quickdraw",
+      "Type": "Passive",
+      "Ability": "When this unit is attacked, before the opponent rolls attack dice roll a d20. On a roll below 5, Felix may perform an attack on the attacking unit (this occurs before the other unit attacks)."
+    },
+    {
+      "Name": "Spinning Flamethrower",
+      "Type": "Active",
+      "Ability": "Once per turn as an action target all units within 2 range of Felix. Roll a d20 for each one. On a roll of 10 or less that unit takes 1 damage."
+    }
+  ]
+}
