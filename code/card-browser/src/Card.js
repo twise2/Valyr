@@ -47,6 +47,13 @@ class Card extends Component {
           'linear-gradient(to bottom right, rgba(150, 40, 27, .5), rgba(220, 85, 57, .4))',
       };
     }
+    //Swazlid colors
+    if (unit.Identity.Dynasty === 'Swazlid') {
+      return {
+        background:
+          'linear-gradient(to bottom right, rgba(101, 67, 33, .5), rgba(67, 101, 33, .5))',
+      };
+    }
     //Neutral Colors
     else {
       return {
