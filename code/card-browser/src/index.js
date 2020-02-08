@@ -9,7 +9,7 @@ import { Switch, Route } from 'react-router-dom'
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route exact path="/" component={Viewer} />
+      <Route exact path="/:params?" component={Viewer} />
       <Route path='/card/:cardName' component={Printable}/>
     </Switch>
   </BrowserRouter>,

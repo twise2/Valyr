@@ -1,0 +1,27 @@
+.notifyBox {
+  /*location*/
+  z-index: 1; /* Sit on top */
+  top: 100vh;
+  transform: translateY(-100%);
+  position: fixed;
+  width: 300px;
+  height: 200px; /* Full height */
+
+
+  /*center the text*/
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /*style*/
+  border: 3px solid black;
+  border-bottom: 0;
+  color: black;
+  background-color: rgba(255, 255, 255, .8); /* Black w/ opacity */
+  font-size: 28px;
+
+  /*fade in over time*/
+  transition: all 3s ease-in-out;
+}

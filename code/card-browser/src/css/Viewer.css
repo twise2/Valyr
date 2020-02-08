@@ -37,19 +37,19 @@
   justify-content: flex-start;
   align-items: center;
 }
-.ResetButton {
+.Button {
   display: flex;
-  margin: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
   justify-content: center;
   align-items: center;
   color: white;
   background-color: gray;
-  padding: 4px;
+  padding: 6px;
   margin: 4px;
   border: 2px solid gray;
   border-radius: 10%;
+}
+.Button:hover {
+  opacity: 0.8;
 }
 .SearchBarText {
   color: black;
@@ -75,11 +75,6 @@
   text-align: center;
   justify-content: center;
 }
-.PrintButton {
-  color: white;
-  background-color: gray;
-  padding: 4px;
-  margin: 4px;
-  border: 2px solid gray;
-  border-radius: 10%;
+.Hoverable:hover {
+  opacity: 0.8;
 }

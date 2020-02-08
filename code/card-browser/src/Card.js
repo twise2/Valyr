@@ -131,18 +131,21 @@ class Card extends Component {
               {cardData.Identity.Dynasty} - {cardData.Identity.Species} -{' '}
               {cardData.Identity.Class}
             </div>
-            <div className="Abilities">
-              {cardData.Abilities.map((ability, index) => {
-                return (
-                  <div key={index}>
-                    <div className="AbilityHeader">
-                      {ability.Name} - {ability.Type}
+
+            {cardData.Abilities.length ? (
+              <div className="Abilities">
+                {cardData.Abilities.map((ability, index) => {
+                  return (
+                    <div key={index}>
+                      <div className="AbilityHeader">
+                        {ability.Name} - {ability.Type}
+                      </div>
+                      <div className="AbilityText">{ability.Ability}</div>
                     </div>
-                    <div className="AbilityText">{ability.Ability}</div>
-                  </div>
-                );
-              })}
-            </div>
+                  );
+                })}
+              </div>
+            ) : null}
           </div>
           <div className="Stats">
             {this.RangeStats(cardData)}

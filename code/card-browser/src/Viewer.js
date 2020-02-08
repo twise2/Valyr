@@ -1,33 +1,65 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import Card from './Card.js';
+import Notification from './Notification.js';
 import {AppBar, Select, MenuItem, Toolbar} from '@material-ui/core';
+import {parse} from 'query-string';
 import './css/Viewer.css';
-
-//import chevron_up from './icons/up-chevron.svg';
 
 class Viewer extends Component {
   constructor(props) {
     super(props);
+
+    const qs = parse(this.props.location.search);
     this.state = {
       units: null,
       originalUnits: null,
-      searchType: '',
-      searchValue: '',
+      searchType: qs.searchType || '',
+      searchValue: qs.searchValue || '',
+      notification: null,
+      savedCards: qs.deck || [],
     };
   }
 
   componentDidMount() {
     fetch('/units')
       .then(response => response.json())
-      .then(units => this.setState({units, originalUnits: units}));
+      .then(units =>
+        this.setState({originalUnits: units}, () => this.filter()),
+      );
   }
 
+  copyToClipboard(text) {
+    var dummy = document.createElement('input');
+    document.body.appendChild(dummy);
+    dummy.setAttribute('value', text);
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+    this.setState({notification: 'Session Saved to Clipboard'});
+
+    setTimeout(() => {
+      this.setState({notification: null});
+    }, 3000);
+  }
+
+  shareSearch() {
+    const sharableLink = `${window.location.origin.toString()}?searchType=${
+      this.state.searchType
+    }&searchValue=${this.state.searchValue}`;
+    this.copyToClipboard(sharableLink);
+    this.popupConfirmation('copied to clipboard');
+  }
+
+  popupConfirmation(text) {}
+
   resetSearch() {
+    this.props.location.search = '';
     this.setState({
       units: this.state.originalUnits,
       searchType: '',
       searchValue: '',
+      savedDeck: [],
     });
   }
 
@@ -56,6 +88,7 @@ class Viewer extends Component {
     menuItems = [...new Set(menuItems)];
     return (
       <Select
+        style={{margin: '10px'}}
         id="SearchFilter"
         value={this.state.searchValue}
         onChange={event => {
@@ -73,6 +106,7 @@ class Viewer extends Component {
   SearchTypeSelect() {
     return (
       <Select
+        style={{margin: '10px'}}
         id="SearchType"
         value={this.state.searchType}
         onChange={event => {
@@ -93,19 +127,33 @@ class Viewer extends Component {
     if (!this.state.units) return null;
     return (
       <div className="CardViewer">
+        {this.state.notification ? (
+          <Notification text={this.state.notification}></Notification>
+        ) : null}
+
         <AppBar position="sticky" className="SearchBar">
           <Toolbar className="SearchBar">
             <div className="Search">
+              <div className="Button" onClick={() => this.resetSearch()}>
+                Reset Filters
+              </div>
               <div className="SearchBarText">Choose the filter type</div>
               {this.SearchTypeSelect()}
-              {this.state.searchType.length ? <div className="SearchBarText">Choose a value to Filter By</div> : null}
-              {this.state.searchType.length ? this.SearchTypeFilter(this.state.searchType) : null}
+              {this.state.searchType.length ? (
+                <div className="SearchBarText">Choose a value to Filter By</div>
+              ) : null}
+              {this.state.searchType.length
+                ? this.SearchTypeFilter(this.state.searchType)
+                : null}
             </div>
-            <div className="ResetButton" onClick={() => this.resetSearch()}>
-              Reset Filters
+            <div className="Button">{`${this.state.savedCards.length} Cards in deck`}</div>
+            <div className="Button" onClick={() => this.shareSearch()}>
+              Save Session
             </div>
+            {/*TODO add a button that shows just your deck of cards*/}
           </Toolbar>
         </AppBar>
+
         <div className="FilterHeader">
           {`showing ${Object.keys(this.state.units).length} ${
             this.state.searchValue
@@ -117,14 +165,22 @@ class Viewer extends Component {
               key={cardName}
               className="HorizontalFlex"
               style={{borderTop: '1px solid black'}}>
-              <Card data={cardName}></Card>
+              {/*TODO: put in a way to add units to your deck*/}
+              <Link
+                className="Hoverable"
+                style={{textDecoration: 'none'}}
+                target="_blank"
+                to={`/card/${cardName}`}>
+                <Card data={cardName}></Card>
+              </Link>
               <div className="VerticalFlex">
+                <div>{/*Button that adds it to the current 'deck'*/}</div>
                 <div>
                   {this.state.units[cardName].Identity.Basic_Description}
                   {this.state.units[cardName].Identity.Description}
                 </div>
                 <Link
-                  className="PrintButton"
+                  className="Button"
                   style={{textDecoration: 'none'}}
                   target="_blank"
                   to={`/card/${cardName}`}>
