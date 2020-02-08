@@ -44,7 +44,7 @@ class Card extends Component {
     if (unit.Identity.Dynasty === 'Olanta') {
       return {
         background:
-          'linear-gradient(to bottom right, rgba(190, 40, 27, .5), rgba(220, 140, 57, .5))',
+          'linear-gradient(to bottom right, rgba(122, 0, 0, .5), rgba(190, 80, 0, .5))',
       };
     }
     //Swazlid colors
