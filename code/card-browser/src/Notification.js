@@ -3,9 +3,11 @@ import './css/Notification.css';
 
 
 class Notification extends Component {
+/*
   constructor(props) {
     super(props);
   }
+*/
 
   render() {
     if (!this.props.text) return null;
