@@ -9,7 +9,6 @@ import './css/Viewer.css';
 class Viewer extends Component {
   constructor(props) {
     super(props);
-
     const qs = parse(this.props.location.search);
     this.state = {
       units: null,
@@ -17,7 +16,6 @@ class Viewer extends Component {
       searchType: qs.searchType || '',
       searchValue: qs.searchValue || '',
       notification: null,
-      savedCards: qs.deck || [],
     };
   }
 
@@ -27,6 +25,21 @@ class Viewer extends Component {
       .then(units =>
         this.setState({originalUnits: units}, () => this.filter()),
       );
+  }
+
+  componentDidUpdate(prevProps) {
+    if (
+      this.props.history.location.query !== prevProps.history.location.query
+    ) {
+      const qs = parse(this.props.location.search);
+      this.setState(
+        {
+          searchType: qs.searchType || '',
+          searchValue: qs.searchValue || '',
+        },
+        () => this.filter(),
+      );
+    }
   }
 
   copyToClipboard(text) {
@@ -63,7 +76,18 @@ class Viewer extends Component {
     });
   }
 
+  updateQS() {
+    console.log('history', this.props.history)
+    const pathname = `${window.location.origin.toString()}?searchType=${
+      this.state.searchType
+    }&searchValue=${this.state.searchValue}`;
+    this.props.history.push({
+      pathname,
+    });
+  }
+
   filter() {
+    //this.updateQS()
     //link to parameters to change so entire screen rerenders
     if (this.state.searchType.length > 1 && this.state.searchValue.length > 1) {
       let newUnits = {};
@@ -146,11 +170,9 @@ class Viewer extends Component {
                 ? this.SearchTypeFilter(this.state.searchType)
                 : null}
             </div>
-            <div className="Button">{`${this.state.savedCards.length} Cards in deck`}</div>
             <div className="Button" onClick={() => this.shareSearch()}>
               Save Session
             </div>
-            {/*TODO add a button that shows just your deck of cards*/}
           </Toolbar>
         </AppBar>
 
@@ -165,7 +187,6 @@ class Viewer extends Component {
               key={cardName}
               className="HorizontalFlex"
               style={{borderTop: '1px solid black'}}>
-              {/*TODO: put in a way to add units to your deck*/}
               <Link
                 className="Hoverable"
                 style={{textDecoration: 'none'}}

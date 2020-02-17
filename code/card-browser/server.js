@@ -42,5 +42,5 @@ app.get('/unit/:cardName', function(req, res) {
   return res.send(JSON.parse(contents))
 });
 
-console.log(`server listening on port 8080`)
-app.listen(8080);
+console.log(`server listening on port 3001`)
+app.listen(3001);
