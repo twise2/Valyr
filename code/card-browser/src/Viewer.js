@@ -68,26 +68,29 @@ class Viewer extends Component {
 
   resetSearch() {
     this.props.location.search = '';
-    this.setState({
-      units: this.state.originalUnits,
-      searchType: '',
-      searchValue: '',
-      savedDeck: [],
-    });
+    this.setState(
+      {
+        units: this.state.originalUnits,
+        searchType: '',
+        searchValue: '',
+        savedDeck: [],
+      },
+      () => this.updateQS(),
+    );
   }
 
   updateQS() {
-    console.log('history', this.props.history)
-    const pathname = `${window.location.origin.toString()}?searchType=${
-      this.state.searchType
-    }&searchValue=${this.state.searchValue}`;
+    const pathname =
+      this.state.searchType || this.state.searchValue
+        ? `?searchType=${this.state.searchType}&searchValue=${this.state.searchValue}`
+        : ` `;
     this.props.history.push({
       pathname,
     });
   }
 
   filter() {
-    //this.updateQS()
+    this.updateQS();
     //link to parameters to change so entire screen rerenders
     if (this.state.searchType.length > 1 && this.state.searchValue.length > 1) {
       let newUnits = {};
