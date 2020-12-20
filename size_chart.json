@@ -1,4 +1,4 @@
-"Sizes": {
+{
   "token": "Small Circular Token on the Map",
   "Tiny": "~14mm",
   "Small": "~21mm",
@@ -7,8 +7,5 @@
   "Giant": "~70mm",
   "Massive": "~100mm",
   "Colossal": "~>150mm",
-  "Immense": "large models on scale of moving fortresses"
-},
-"Notes": {
-  "Giant And Larger Units": "Giant and Larger Units Have a front and back. The front piece of the unit is where attacks come from unless otherwise denoted."
+  "Immense": "~>215mm"
 }
