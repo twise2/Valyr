@@ -1,39 +1,35 @@
 .CardViewer {
-  font-family: 'Herculanum';
-  background-color: lightgray;
+  font-family: "Herculanum";
+  background-color: #D9CEAD;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: auto;
 }
 .SearchBar {
   width: 100%;
-  color: white;
   display: flex;
-  flex: 1;
   flex-direction: row;
-  background-color: white;
-  color: black;
+  background-color: #D9CEAD;
+  color: #710117;
   justify-content: space-between;
   align-items: center;
 }
 .FilterHeader {
   width: 100%;
   display: flex;
-  flex: 1;
   flex-direction: row;
   margin: 10px;
-  background-color: lightgray;
-  color: black;
+  background-color: #D9CEAD;
+  color: #710117;
   justify-content: center;
   align-items: center;
 }
 .Search {
   display: flex;
   flex: 1;
-  flex-direction: row;
-  color: black;
+  flex-wrap: wrap;
+  color: #D9CEAD;
   justify-content: flex-start;
   align-items: center;
 }
@@ -41,36 +37,35 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  background-color: gray;
-  padding: 6px;
+  text-align: center;
+  color: #d9cead;
+  background-color: #710117;
+  padding: 10px;
   margin: 4px;
-  border: 2px solid gray;
-  border-radius: 10%;
+  border: 4px solid #710117;
+  border-radius: 6%;
 }
 .Button:hover {
   opacity: 0.8;
 }
 .SearchBarText {
-  color: black;
+  color: #710117;
   padding: 10px;
+  background-color: #d9cead;
 }
 .HorizontalFlex {
-  flex: 1;
   display: flex;
   flex-direction: row;
-  width: 8.5in;
-  height: 11in;
+  flex-wrap: wrap;
   padding: 10px;
   align-items: center;
   justify-content: center;
 }
 .VerticalFlex {
-  padding: 16px;
-  flex: 1;
+  padding: 2px 8px;
   display: flex;
   flex-direction: column;
-  margin: auto;
+  width: 300px;
   align-items: center;
   text-align: center;
   justify-content: center;

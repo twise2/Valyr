@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
-import Card from './Card.js';
-import Notification from './Notification.js';
-import {AppBar, Select, MenuItem, Toolbar} from '@material-ui/core';
-import {parse} from 'query-string';
-import './css/Viewer.css';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import Card from "./Card.js";
+import Notification from "./Notification.js";
+import { AppBar, Select, MenuItem, Toolbar } from "@material-ui/core";
+import { parse } from "query-string";
+import "./css/Viewer.css";
 
 class Viewer extends Component {
   constructor(props) {
@@ -13,17 +13,17 @@ class Viewer extends Component {
     this.state = {
       units: null,
       originalUnits: null,
-      searchType: qs.searchType || '',
-      searchValue: qs.searchValue || '',
+      searchType: qs.searchType || "",
+      searchValue: qs.searchValue || "",
       notification: null,
     };
   }
 
   componentDidMount() {
-    fetch('/units')
+    fetch("/units")
       .then(response => response.json())
       .then(units =>
-        this.setState({originalUnits: units}, () => this.filter()),
+        this.setState({ originalUnits: units }, () => this.filter()),
       );
   }
 
@@ -34,8 +34,8 @@ class Viewer extends Component {
       const qs = parse(this.props.location.search);
       this.setState(
         {
-          searchType: qs.searchType || '',
-          searchValue: qs.searchValue || '',
+          searchType: qs.searchType || "",
+          searchValue: qs.searchValue || "",
         },
         () => this.filter(),
       );
@@ -43,16 +43,15 @@ class Viewer extends Component {
   }
 
   copyToClipboard(text) {
-    var dummy = document.createElement('input');
+    var dummy = document.createElement("input");
     document.body.appendChild(dummy);
-    dummy.setAttribute('value', text);
+    dummy.setAttribute("value", text);
     dummy.select();
-    document.execCommand('copy');
+    document.execCommand("copy");
     document.body.removeChild(dummy);
-    this.setState({notification: 'Session Saved to Clipboard'});
-
+    this.setState({ notification: "Session Saved to Clipboard" });
     setTimeout(() => {
-      this.setState({notification: null});
+      this.setState({ notification: null });
     }, 3000);
   }
 
@@ -61,18 +60,18 @@ class Viewer extends Component {
       this.state.searchType
     }&searchValue=${this.state.searchValue}`;
     this.copyToClipboard(sharableLink);
-    this.popupConfirmation('copied to clipboard');
+    this.popupConfirmation("copied to clipboard");
   }
 
   popupConfirmation(text) {}
 
   resetSearch() {
-    this.props.location.search = '';
+    this.props.location.search = "";
     this.setState(
       {
         units: this.state.originalUnits,
-        searchType: '',
-        searchValue: '',
+        searchType: "",
+        searchValue: "",
         savedDeck: [],
       },
       () => this.updateQS(),
@@ -102,9 +101,9 @@ class Viewer extends Component {
           newUnits[unitName] = this.state.originalUnits[unitName];
         }
       });
-      return this.setState({units: newUnits});
+      return this.setState({ units: newUnits });
     } else {
-      return this.setState({units: this.state.originalUnits});
+      return this.setState({ units: this.state.originalUnits });
     }
   }
 
@@ -115,12 +114,15 @@ class Viewer extends Component {
     menuItems = [...new Set(menuItems)];
     return (
       <Select
-        style={{margin: '10px'}}
+        style={{ margin: "10px" }}
         id="SearchFilter"
         value={this.state.searchValue}
         onChange={event => {
-          this.setState({searchValue: event.target.value}, () => this.filter());
-        }}>
+          this.setState({ searchValue: event.target.value }, () =>
+            this.filter(),
+          );
+        }}
+      >
         {menuItems.map(item => (
           <MenuItem key={item} value={item}>
             {item}
@@ -133,19 +135,25 @@ class Viewer extends Component {
   SearchTypeSelect() {
     return (
       <Select
-        style={{margin: '10px'}}
+        style={{ margin: "10px" }}
         id="SearchType"
         value={this.state.searchType}
+        classes={{
+          root: "SearchBarText",
+          selectMenu: "SearchBarText",
+        }}
         onChange={event => {
-          this.setState({searchType: event.target.value, searchValue: ''}, () =>
-            this.filter(),
+          this.setState(
+            { searchType: event.target.value, searchValue: "" },
+            () => this.filter(),
           );
-        }}>
-        <MenuItem value={'Dynasty'}>Dynasty</MenuItem>
-        <MenuItem value={'Type'}>Type</MenuItem>
-        <MenuItem value={'Class'}>Class</MenuItem>
-        <MenuItem value={'Species'}>Species</MenuItem>
-        <MenuItem value={'Size'}>Size</MenuItem>
+        }}
+      >
+        <MenuItem value={"Dynasty"}>Dynasty</MenuItem>
+        <MenuItem value={"Type"}>Type</MenuItem>
+        <MenuItem value={"Class"}>Class</MenuItem>
+        <MenuItem value={"Species"}>Species</MenuItem>
+        <MenuItem value={"Size"}>Size</MenuItem>
       </Select>
     );
   }
@@ -161,20 +169,17 @@ class Viewer extends Component {
         <AppBar position="sticky" className="SearchBar">
           <Toolbar className="SearchBar">
             <div className="Search">
-              <div className="Button" onClick={() => this.resetSearch()}>
-                Reset Filters
-              </div>
-              <div className="SearchBarText">Choose the filter type</div>
-              {this.SearchTypeSelect()}
+              <div className="SearchBarText">Filter Type</div>
+              {this.SearchTypeSelect("Filter Type")}
               {this.state.searchType.length ? (
-                <div className="SearchBarText">Choose a value to Filter By</div>
+                <div className="SearchBarText">Filter Value</div>
               ) : null}
               {this.state.searchType.length
                 ? this.SearchTypeFilter(this.state.searchType)
                 : null}
             </div>
-            <div className="Button" onClick={() => this.shareSearch()}>
-              Save Session
+            <div className="Button" onClick={() => this.resetSearch()}>
+              Reset Filters
             </div>
           </Toolbar>
         </AppBar>
@@ -189,12 +194,14 @@ class Viewer extends Component {
             <div
               key={cardName}
               className="HorizontalFlex"
-              style={{borderTop: '1px solid black'}}>
+              style={{ borderTop: "1px solid black" }}
+            >
               <Link
                 className="Hoverable"
-                style={{textDecoration: 'none'}}
+                style={{ textDecoration: "none" }}
                 target="_blank"
-                to={`/card/${cardName}`}>
+                to={`/card/${cardName}`}
+              >
                 <Card data={cardName}></Card>
               </Link>
               <div className="VerticalFlex">
@@ -205,10 +212,11 @@ class Viewer extends Component {
                 </div>
                 <Link
                   className="Button"
-                  style={{textDecoration: 'none'}}
+                  style={{ textDecoration: "none" }}
                   target="_blank"
-                  to={`/card/${cardName}`}>
-                  {'Click Here To Print Me'}
+                  to={`/card/${cardName}`}
+                >
+                  {"Click Here To Print Me"}
                 </Link>
               </div>
             </div>
