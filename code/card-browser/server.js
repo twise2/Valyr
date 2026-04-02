@@ -1,19 +1,22 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const path = require('path');
-const fs = require('fs');
+import express from 'express';
+import path from 'path';
+import fs from 'fs';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const app = express();
 console.log('starting express server');
 app.use(express.static(path.join(__dirname, 'build')));
-//don't touch dirname before build
-const unitDirectoryPath = path.join(__dirname + '../../../units/');
-const factionsFilePath = path.join(__dirname + '../../../factions.json');
 
-app.use('/templates', express.static(__dirname + '/templates'));
+const unitDirectoryPath = path.join(__dirname, '../../units/');
+const factionsFilePath = path.join(__dirname, '../../factions.json');
 
-app.get('/unitNames', function(req, res) {
-  return fs.readdir(unitDirectoryPath, function(err, files) {
-    //handling error
+app.use('/templates', express.static(path.join(__dirname, 'templates')));
+
+app.get('/unitNames', function (req, res) {
+  return fs.readdir(unitDirectoryPath, function (err, files) {
     if (err) {
       return console.log('Unable to scan directory: ' + err);
     }
@@ -21,31 +24,31 @@ app.get('/unitNames', function(req, res) {
   });
 });
 
-app.get('/units', function(req, res) {
+app.get('/units', function (req, res) {
   let data = {};
-  fs.readdir(unitDirectoryPath, function(err, files) {
-    //handling error
+  fs.readdir(unitDirectoryPath, function (err, files) {
     if (err) {
       return console.log('Unable to scan directory: ' + err);
     }
-    console.log('Printing All Parsing Errors...');
-    //listing all files using forEach
-    files.forEach(function(file) {
-      contents = fs.readFileSync(unitDirectoryPath + file, 'utf8');
+    files.forEach(function (file) {
+      const contents = fs.readFileSync(path.join(unitDirectoryPath, file), 'utf8');
       data[file] = JSON.parse(contents);
     });
     return res.send(data);
   });
 });
 
-app.get('/factions', function(req, res) {
-  return res.send(JSON.parse(fs.readFileSync(factionsFilePath)));
+app.get('/factions', function (req, res) {
+  return res.send(JSON.parse(fs.readFileSync(factionsFilePath, 'utf8')));
 });
 
-app.get('/unit/:cardName', function(req, res) {
-  contents = fs.readFileSync(unitDirectoryPath + req.params.cardName, 'utf8');
+app.get('/unit/:cardName', function (req, res) {
+  const contents = fs.readFileSync(
+    path.join(unitDirectoryPath, req.params.cardName),
+    'utf8',
+  );
   return res.send(JSON.parse(contents));
 });
 
-console.log(`server listening on port 3001`);
+console.log('server listening on port 3001');
 app.listen(3001);

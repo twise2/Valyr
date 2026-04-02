@@ -1,0 +1,12 @@
+{
+  "name": "valyr",
+  "private": true,
+  "workspaces": [
+    "code/card-browser"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=code/card-browser",
+    "build": "npm run build --workspace=code/card-browser",
+    "lint:units": "node code/lint_units.js"
+  }
+}
